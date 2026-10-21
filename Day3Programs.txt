@@ -1,0 +1,178 @@
+//class
+
+class Student {
+    String name;
+    int age;
+
+    void study() {
+        System.out.println("Student is studying");
+    }
+}
+
+//Object
+
+class Student {
+    String name;
+
+    void study() {
+        System.out.println("Studying");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.name = "Rahul";
+
+        System.out.println(s1.name);
+        s1.study();
+    }
+}
+
+//Constructor
+
+class Student {
+
+    String name;
+
+    Student() {
+        name = "Rahul";
+    }
+}
+
+//No-argument Constructor
+
+class Student {
+
+    Student() {
+        System.out.println("Constructor called");
+    }
+}
+
+//Parameterized constructor
+
+class Student {
+
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+}
+
+//Encapsulation
+
+class Student {
+
+    private int age;
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+//Inheritance
+
+class Animal {
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Compile-time polymorphism
+
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+//Runtime polymorphism
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Abstraction
+abstract class Animal {
+
+    abstract void sound();
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+//Method
+
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+//Method Overloading
+
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+//Method overriding
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+

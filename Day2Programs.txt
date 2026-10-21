@@ -1,0 +1,224 @@
+//If Programe
+
+if (age >= 18) {
+    System.out.println("Eligible to vote");
+}
+
+//if-else program
+
+if (age >= 18) {
+    System.out.println("Adult");
+} else {
+    System.out.println("Minor");
+}
+
+//else-if ladder
+
+if (marks >= 90) {
+    System.out.println("A");
+} else if (marks >= 75) {
+    System.out.println("B");
+} else if (marks >= 50) {
+    System.out.println("C");
+} else {
+    System.out.println("Fail");
+}
+
+
+//switch statement
+
+int day = 1;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid day");
+}
+
+// for loop
+
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+Output:
+1
+2
+3
+4
+5
+
+
+//while loop
+
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+
+//do-while Loop
+
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
+//Input-output Statement in java
+
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter your age: ");
+int age = sc.nextInt();
+System.out.println("Your age is " + age);
+
+//**1. Check Whether a Number is Even or Odd**
+
+-import java.util.Scanner;
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+    }
+}
+output:
+Enter a number: 10
+Even number
+
+2. Find the Largest of Three Numbers
+-> import java.util.Scanner;
+public class LargestThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        System.out.print("Enter third number: ");
+        int c = sc.nextInt();
+        if (a >= b && a >= c) {
+            System.out.println("Largest = " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("Largest = " + b);
+        } else {
+            System.out.println("Largest = " + c);
+        }
+    }
+}
+output:
+Enter first number: 10
+Enter second number: 25
+Enter third number: 15
+
+Largest = 25
+
+3. Calculate Factorial of a Number
+-> import java.util.Scanner;
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact = fact * i;
+        }
+        System.out.println("Factorial = " + fact);
+    }
+}
+output:
+Enter a number: 5
+Factorial = 120
+
+4. Check Whether a Number is Prime
+-> import java.util.Scanner;
+public class PrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        boolean prime = true;
+        if (num <= 1) {
+            prime = false;
+        } else {
+            for (int i = 2; i < num; i++) {
+
+                if (num % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+        }
+
+        if (prime) {
+            System.out.println("Prime number");
+        } else {
+            System.out.println("Not a prime number");
+        }
+    }
+}
+output:
+Enter a number: 7
+Prime number
+
+5. Reverse a Number
+-> import java.util.Scanner;
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int reverse = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+        System.out.println("Reverse = " + reverse);
+    }
+}
+output: Enter a number: 1234
+Reverse = 4321
+
+6. Print Multiplication Table
+-> import java.util.Scanner;
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+output:
+Enter a number: 5
+
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+

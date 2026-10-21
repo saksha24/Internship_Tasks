@@ -1,0 +1,300 @@
+**## Day 2 — Java Programming Fundamentals ##**
+
+**1. What is Java?**
+Answer:
+
+-Java is a high-level, object-oriented programming language developed by Sun Microsystems.
+-Java is used to develop:
+- Web applications
+- Desktop applications
+- Mobile applications
+- Enterprise applications
+- Backend applications
+-Java is popular because it is:
+- Simple
+- Object-oriented
+- Secure
+- Portable
+- Robust
+- Platform-independent
+-Why is Java platform-independent?
+-Java follows the concept:
+-Write Once, Run Anywhere (WORA)
+-Java source code is converted into bytecode. This bytecode can run on any system that has a suitable JVM.
+
+**3. What is JDK?**
+
+Answer:
+JDK stands for Java Development Kit.
+JDK is used by developers to develop, compile, run, and debug Java programs.
+It contains:
+- JRE
+- Development tools
+- Java compiler (javac)
+- Other tools required for Java development
+Simple definition:
+JDK is a complete package used to develop Java applications.
+
+4. What is JRE?
+Answer:
+JRE stands for Java Runtime Environment.
+JRE provides the environment required to run Java applications.
+It contains:
+- JVM
+- Java libraries
+- Supporting runtime files
+Simple definition:
+JRE is used to run Java programs.
+
+5. What is JVM?
+Answer:
+JVM stands for Java Virtual Machine.
+JVM is responsible for executing Java bytecode.
+It converts/interprets bytecode into instructions that the computer can execute.
+Simple definition:
+JVM runs Java bytecode.
+
+7. What is a Variable in Java?
+Answer:
+-A variable is a named memory location used to store data.
+-For example:
+-int age = 20;
+
+Here:
+- int → data type
+- age → variable name
+- 20 → value
+-The value of a variable can change during program execution.
+Example:
+int age = 20;
+age = 21;
+
+**8. What are Data Types in Java?**
+
+-A data type tells Java what type of value a variable can store.
+-Java data types are mainly divided into:
+
+-1. Primitive Data Types
+There are 8 primitive data types:
+Data Type			Used For			Example
+-byte			    Small integer			byte a = 10;
+-short			    Integer short 			a = 100;
+-int			    Integer int 			a = 500;
+-long			    Large integer		        long a = 50000L;
+-float			    Decimal number			float a = 10.5f;
+-double			    Decimal number			double a = 10.5;
+-char			    Single character			char a = 'A';
+-boolean			    True/false				boolean a = true;
+
+
+2. Non-Primitive Data Types
+Examples:
+- String
+- Array
+- Class
+- Object
+- Interface
+Example:
+String name = "Sakshi";
+
+10. What are the types of Operators in Java?
+Answer:
+The main types are:
+1. Arithmetic Operators
+-Used for mathematical calculations.
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Modulus
+
+Example:
+int result = 10 + 5;
+
+2. Relational Operators
+-Used to compare two values.
+==   Equal to
+!=   Not equal to
+>    Greater than
+<    Less than
+>=   Greater than or equal to
+<=   Less than or equal to
+-The result is usually true or false.
+
+3. Logical Operators
+-Used to combine conditions.
+&&   AND
+||   OR
+!    NOT
+
+Example:
+age >= 18 && age <= 60
+
+4. Assignment Operators
+-Used to assign values.
+=
++=
+-=
+*=
+/=
+
+Example:
+int x = 10;
+x += 5;
+
+5. Increment and Decrement Operators
+++   Increment
+--   Decrement
+
+Example:
+x++;
+x--;
+
+11. What are Conditional Statements?
+Answer:
+Conditional statements are used to make decisions in a program.
+Java provides:
+1. if
+2. if-else
+3. else-if
+4. switch
+
+12. What is an if Statement?
+Answer:
+The if statement executes a block of code when a condition is true.
+Example:
+if (age >= 18) {
+    System.out.println("Eligible to vote");
+}
+
+If age is 18 or greater, the message is displayed.
+
+13. What is if-else?
+Answer:
+if-else is used when there are two possible conditions.
+Example:
+if (age >= 18) {
+    System.out.println("Adult");
+} else {
+    System.out.println("Minor");
+}
+-If the condition is true, the if block executes. Otherwise, the else block executes.
+
+14. What is an else-if Ladder?
+Answer:
+An else-if ladder is used when we have multiple conditions.
+Example:
+if (marks >= 90) {
+    System.out.println("A");
+} else if (marks >= 75) {
+    System.out.println("B");
+} else if (marks >= 50) {
+    System.out.println("C");
+} else {
+    System.out.println("Fail");
+}
+-Java checks the conditions from top to bottom.
+
+15. What is a switch Statement?
+Answer:
+A switch statement is used to select one option from multiple choices.
+Example:
+int day = 1;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid day");
+}
+
+break is commonly used to stop execution from continuing into the next case.
+
+16. What are Loops in Java?
+Answer:
+A loop is used to execute a block of code repeatedly.
+Java mainly provides:
+1. for loop
+2. while loop
+3. do-while loop
+Loops help avoid writing the same code multiple times.
+
+17. What is a for Loop?
+Answer:
+A for loop is generally used when we know how many times we want to execute a block of code.
+Example:
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+
+Output:
+1
+2
+3
+4
+5
+
+18. What is a while Loop?
+Answer:
+A while loop executes a block of code while a condition is true.
+Example:
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+The condition is checked before each iteration.
+
+
+19. What is a do-while Loop?
+Answer:
+A do-while loop executes the block at least once, because the condition is checked after the block executes.
+Example:
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
+Important difference:
+while:
+Check condition → Execute
+
+do-while:
+Execute → Check condition
+
+21. What is Input and Output in Java?
+Answer:
+-Input means taking information from the user.
+-Output means displaying information to the user.
+Output
+Java commonly uses:
+System.out.println("Hello");
+
+It displays:
+Hello
+
+-Input
+-The Scanner class can be used to take input from the keyboard.
+Example:
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter your age: ");
+int age = sc.nextInt();
+System.out.println("Your age is " + age);
+
+Example:
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter your age: ");
+int age = sc.nextInt();
+System.out.println("Your age is " + age);

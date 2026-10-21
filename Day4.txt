@@ -1,0 +1,271 @@
+##Day 4 — Advanced Java Programming Concepts ##
+
+1 What is an Array?
+Definition: An array in Java is an object that stores a fixed number of elements of the same data type in a single variable.
+Instead of declaring multiple variables for storing similar data, we can use an array.
+Example: Without an Array
+Suppose we want to store the marks of five students.
+int mark1 = 70;
+int mark2 = 80;
+int mark3 = 65;
+int mark4 = 90;
+int mark5 = 75;
+
+Advantages and Disadvantages of Arrays
+Advantages
+1. Simple and easy to use.
+2. Stores multiple elements under one reference.
+3. Provides fast indexed access.
+4. Useful for sorting and searching algorithms.
+5. Can store primitive values directly.
+6. Has relatively low overhead compared with many collection implementations.
+Disadvantages
+1. The length is fixed after creation.
+2. Inserting or removing elements in the middle usually requires shifting elements or creating another array.
+3. An array cannot directly store primitive and reference elements together under one component type.
+4. Arrays provide fewer built-in data-management operations than collection classes.
+5. Accessing an invalid index causes an exception.
+
+2.1 What Is a String?
+Definition: A String in Java is an object representing a sequence of characters.
+Strings are used to store and manipulate text.
+Examples:
+String name = "Sakshi";
+String city = "Pune";
+String language = "Java";
+2.1 What Is a String?
+Definition: A String in Java is an object representing a sequence of characters.
+Strings are used to store and manipulate text.
+Examples:
+String name = "Sakshi";
+String city = "Pune";
+String language = "Java";
+
+Important String Methods
+1. length()
+Returns the number of UTF-16 code units in the string.
+2. charAt()
+Returns the character at a specified index.
+3. toUpperCase()
+Converts the string to uppercase.
+4. toLowerCase()
+Converts the string to lowercase.
+5. substring()
+Extracts part of a string.
+7. equals()
+Checks whether two strings have equal content.
+8. equalsIgnoreCase()
+Compares strings without considering differences in letter case.
+9. startsWith()
+Checks whether a string starts with the specified prefix.
+10. endsWith()
+Checks whether a string ends with the specified suffix.
+11. replace()
+Replaces matching characters or character sequences.
+12. trim()
+Removes leading and trailing characters whose values are at most U+0020, including ordinary spaces.
+14. split()
+Splits a string using a regular expression.
+
+Advantages and Disadvantages of Strings
+Advantages
+1. Easy to create and use.
+2. Provides many built-in methods.
+3. Immutability makes strings safe to share.
+4. String Pooling can reduce duplicate string objects.
+5. Strings support comparison, searching, extraction, and replacement.
+6. Useful for processing text in applications.
+Disadvantages
+1. Repeated modifications can create many temporary string objects.
+2. A string cannot be modified in place.
+3. Concatenation inside large loops may be inefficient if it creates many intermediate strings.
+4. Java strings use UTF-16 code units, so length() does not always equal the number of Unicode code points or user-perceived characters.
+
+What Is the Collections Framework?
+Definition: The Java Collections Framework is a unified architecture of interfaces, classes, and algorithms used to store, organize, access, search, sort, and manipulate groups of objects.
+It is available mainly through the java.util package.
+Examples include:
+- ArrayList
+- LinkedList
+- HashSet
+- TreeSet
+- HashMap
+- TreeMap
+- PriorityQueue
+The framework provides reusable data structures instead of requiring developers to implement every data structure from scratch.
+
+Collection
+Collection is an interface in Java.
+It is the root interface for the main collection hierarchy, including List, Set, and Queue.
+Collections
+Collections is a utility class.
+It provides static methods for operations such as sorting, reversing, shuffling, and finding minimum or maximum values.
+
+
+Q) What is ArrayList?
+Definition: ArrayList is a class in Java that implements the List interface and provides a resizable array for storing elements.
+A normal array has a fixed length, whereas an ArrayList can grow or shrink as elements are added or removed.
+ArrayList belongs to the java.util package.
+
+Important characteristics of ArrayList
+1. It maintains insertion order.
+2. It allows duplicate elements.
+3. It supports index-based access.
+4. Its size can change dynamically.
+5. It can store null elements.
+6. It is not synchronized by default.
+7. It supports generics for type safety.
+8. It provides methods to add, remove, search, and update elements.
+
+How to Declare an ArrayList
+Syntax
+ArrayList<DataType> listName = new ArrayList<>();
+
+Important ArrayList Methods
+Method			Description				Example
+add(element)		Adds an element				list.add("Java")
+add(index, element)	Inserts at an index			list.add(0, "Java")
+get(index)		Retrieves an element			list.get(0)
+set(index, element)	Replaces an element			list.set(0, "Python")
+remove(index)		Removes by index			list.remove(0)
+remove(object)		Removes a matching element		list.remove("Java")
+size()			Returns the number of elements		list.size()
+contains(element)	Checks whether an element exists	list.contains("Java")
+indexOf(element)	Returns the first matching index	list.indexOf("Java")
+isEmpty()		Checks whether the list is empty	list.isEmpty()
+clear()			Removes all elements			list.clear()
+
+Q) What Is HashMap?
+Definition: HashMap is a Java class that implements the Map interface and stores data in key-value pairs.
+It belongs to the java.util package.
+Each key identifies a mapping to a value.
+
+How to Declare a HashMap
+Syntax
+HashMap<KeyType, ValueType> mapName = new HashMap<>();
+
+Important HashMap Methods
+Method						Purpose
+put(key, value)					Adds or replaces a mapping
+get(key)					Retrieves the associated value
+remove(key)					Removes a mapping
+containsKey(key)				Checks whether a key exists
+containsValue(value)				Checks whether a value exists
+size()						Returns the number of mappings
+isEmpty()					Checks whether the map is empty
+keySet()					Returns the set of keys
+values()					Returns the collection of values
+entrySet()					Returns the set of key-value entries
+getOrDefault(key, defaultValue)			Returns a default if no non-null mapping exists
+putIfAbsent(key, value)				Adds a mapping if the key is absent or currently mapped to null
+clear()						Removes all mappings
+
+Q) What Is an Exception?
+Definition: An exception is an event that occurs during program execution and disrupts the normal flow of instructions.
+An exception may occur because of invalid input, an illegal operation, a missing file, a failed network operation, or another runtime problem.
+
+Why Is Exception Handling Important?
+Exception handling is important because it:
+1. Prevents expected exceptional conditions from crashing the entire application unnecessarily.
+2. Separates normal program logic from error-handling logic.
+3. Allows meaningful error messages.
+4. Helps applications recover when recovery is possible.
+5. Supports resource cleanup.
+6. Allows errors to propagate to an appropriate layer.
+7. Improves debugging and maintenance.
+
+Types of Errors and Exceptions
+Java's throwable hierarchy begins with Throwable.
+Object
+  |
+Throwable
+  |
+  |-------------------------|
+  |                         |
+ Error                   Exception
+                            |
+                   |--------|---------|
+                   |                  |
+             RuntimeException    Other exceptions
+	
+Exception
+An Exception represents a condition that an application may be able to handle.
+Exceptions are commonly divided into checked and unchecked exceptions.
+1. Checked exceptions
+Checked exceptions are checked by the compiler.
+A method must catch them or declare them using throws, unless an enclosing method or construct already handles them.
+Examples:
+- IOException
+- SQLException
+- ClassNotFoundException
+
+2. Unchecked exceptions
+Unchecked exceptions are subclasses of RuntimeException.
+The compiler does not require them to be caught or declared.
+Examples:
+- ArithmeticException
+- NullPointerException
+- ArrayIndexOutOfBoundsException
+- IllegalArgumentException
+- NumberFormatException
+
+Exception Handling Keywords
+Java provides five important keywords related to exception handling:
+1. try
+2. catch
+3. finally
+4. throw
+5. throws
+
+Q) What Is File Handling?
+Definition: File handling in Java refers to creating, reading, writing, updating, and deleting files using Java APIs.
+File handling allows data to be stored permanently on a storage device rather than existing only in program memory.
+For example:
+- Saving employee information.
+- Reading configuration files.
+- Writing application logs.
+- Uploading documents.
+- Exporting reports.
+- Processing CSV files.
+
+Important Classes for File Handling
+Class						Purpose
+File			Represents a file or directory path and provides file-system operations
+FileReader		Reads text using the default character encoding
+FileWriter		Writes text using the default character encoding
+BufferedReader		Reads text efficiently through buffering
+BufferedWriter		Writes text efficiently through buffering
+FileInputStream		Reads raw bytes
+FileOutputStream	Writes raw bytes
+Path			Represents a file-system path
+Files			Provides static methods for file operations
+Scanner			Reads and parses text input
+
+Q) What Is a Stream in Java?
+Definition: A Java Stream is a sequence of elements that supports functional-style operations for processing data.
+The Stream API was introduced in Java 8.
+It is available through the java.util.stream package.
+Streams are commonly used to:
+- Filter data.
+- Transform elements.
+- Sort data.
+- Find matching elements.
+- Calculate totals.
+- Group data.
+- Aggregate results.
+
+Intermediate Operations
+Intermediate operations transform a stream into another stream.
+Common intermediate operations include:
+- filter()
+- map()
+- flatMap()
+- distinct()
+- sorted()
+- limit()
+- skip()
+- peek()
+
+What Is a Lambda Expression?
+A lambda expression is a concise way to represent an implementation of a functional interface.
+It was introduced in Java 8.

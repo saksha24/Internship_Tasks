@@ -1,0 +1,77 @@
+## Day 5 — Git & GitHub ##
+
+1. What is Git?
+-Git is a free, open-source Version Control System (VCS) that tracks changes made to your source code over time.
+-It helps developers maintain different versions of a project and recover earlier code when necessary.
+
+Advantages of Git
+1. Version Control: Tracks changes in your code.
+2. History Tracking: Shows who changed the code and when.
+3. Rollback: Helps you return to an earlier version.
+4. Branching: Allows you to develop new features separately.
+5. Collaboration: Enables multiple developers to work on the same project.
+6. Backup workflow: Helps you synchronize code with remote repositories.
+
+2. What is GitHub?
+-GitHub is an online platform for hosting Git repositories. It allows developers to store, manage, share, and collaborate on source code.
+
+3. Difference Between Git and GitHub
+Consider this simple example:
+- Git: A tool that tracks the history of your project.
+- GitHub: An online platform where you can host and share that project.
+Think of Git as a tool for maintaining your project's history and GitHub as an online home for your code.
+
+Git						GitHub
+A version control system			An online code hosting platform
+Works locally on your computer			Hosts repositories online
+Tracks changes in source code			Stores and shares Git repositories
+Supports local commits				Supports collaboration through pull requests
+Can work without an internet connection-        Requires internet access for normal-
+-for local operations	                        -online repository operations
+
+A. git init
+-git init initializes a new Git repository in the current directory.
+-git init
+
+B. git add
+-git add stages changes so they can be included in the next commit.
+-git add .
+
+Why do we need git add?
+-Git separates your current file changes from the changes selected for the next commit.
+-The staging area allows you to select which changes belong together in a commit.
+
+C. git commit
+-git commit saves a snapshot of the staged changes to the local repository.
+-git commit -m "Initial commit"
+
+git commit creates the commit.
+-m provides a commit message.
+"Initial commit" describes the changes.
+
+-Check the repository status
+-git status
+
+A. git push
+-Uploads local commits to a remote repository.
+-git push -u origin main
+
+Explanation:
+- push: Uploads commits.
+- origin: The conventional name for the remote repository.
+- main: The branch being pushed.
+- -u: Sets the upstream branch for subsequent pushes.
+
+B. git pull
+-Fetches changes from a remote repository and integrates them into your current branch.
+-git pull origin main
+
+C. git clone
+-Creates a local copy of an existing Git repository, including its available history.
+-git clone https://github.com/USERNAME/AI-Powered-Enterprise-HRMS.git
+
+What is README.md?
+-A README.md file describes your project and explains how to understand, install, configure, and run it.
+-The .md extension stands for Markdown, a lightweight formatting language.
+-A good README is especially important when showcasing a Java Full Stack project on GitHub.
+-README.md

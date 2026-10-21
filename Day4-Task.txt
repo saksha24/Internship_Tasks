@@ -1,0 +1,241 @@
+Q)Store and process student or employee records. • Search for a record by ID or name. • Sort records by name or marks. • Handle invalid input using exception handling. • Practice working with ArrayList and HashMap.
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Scanner;
+
+class Student {
+
+    private int id;
+    private String name;
+    private double marks;
+
+    public Student(int id, String name, double marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id
+                + ", Name: " + name
+                + ", Marks: " + marks;
+    }
+}
+
+public class StudentRecordManagement {
+
+    private static final ArrayList<Student> students = new ArrayList<>();
+    private static final HashMap<Integer, Student> studentMap = new HashMap<>();
+
+    private static final Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int choice;
+
+        do {
+            System.out.println("\n===== STUDENT RECORD MANAGEMENT =====");
+            System.out.println("1. Add Student");
+            System.out.println("2. Display All Students");
+            System.out.println("3. Search Student by ID");
+            System.out.println("4. Search Student by Name");
+            System.out.println("5. Sort Students by Name");
+            System.out.println("6. Sort Students by Marks");
+            System.out.println("7. Exit");
+            System.out.print("Enter your choice: ");
+
+            try {
+                choice = Integer.parseInt(sc.nextLine().trim());
+
+                switch (choice) {
+                    case 1:
+                        addStudent();
+                        break;
+
+                    case 2:
+                        displayStudents();
+                        break;
+
+                    case 3:
+                        searchById();
+                        break;
+
+                    case 4:
+                        searchByName();
+                        break;
+
+                    case 5:
+                        sortByName();
+                        break;
+
+                    case 6:
+                        sortByMarks();
+                        break;
+
+                    case 7:
+                        System.out.println("Program closed successfully.");
+                        break;
+
+                    default:
+                        System.out.println("Invalid choice. Enter a number from 1 to 7.");
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input! Please enter a valid number.");
+                choice = 0;
+            }
+
+        } while (choice != 7);
+
+        sc.close();
+    }
+
+    // Add student
+    private static void addStudent() {
+
+        try {
+            System.out.print("Enter student ID: ");
+            int id = Integer.parseInt(sc.nextLine().trim());
+
+            if (id <= 0) {
+                System.out.println("ID must be greater than zero.");
+                return;
+            }
+
+            if (studentMap.containsKey(id)) {
+                System.out.println("Student ID already exists.");
+                return;
+            }
+
+            System.out.print("Enter student name: ");
+            String name = sc.nextLine().trim();
+
+            if (name.isEmpty()) {
+                System.out.println("Student name cannot be empty.");
+                return;
+            }
+
+            System.out.print("Enter student marks (0-100): ");
+            double marks = Double.parseDouble(sc.nextLine().trim());
+
+            if (!Double.isFinite(marks) || marks < 0 || marks > 100) {
+                System.out.println("Marks must be between 0 and 100.");
+                return;
+            }
+
+            Student student = new Student(id, name, marks);
+
+            students.add(student);
+            studentMap.put(id, student);
+
+            System.out.println("Student added successfully.");
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input! ID and marks must be numeric.");
+        }
+    }
+
+    // Display all students
+    private static void displayStudents() {
+
+        if (students.isEmpty()) {
+            System.out.println("No student records found.");
+            return;
+        }
+
+        System.out.println("\n--- Student Records ---");
+
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+
+    // Search by ID using HashMap
+    private static void searchById() {
+
+        try {
+            System.out.print("Enter student ID to search: ");
+            int id = Integer.parseInt(sc.nextLine().trim());
+
+            Student student = studentMap.get(id);
+
+            if (student != null) {
+                System.out.println("Student found:");
+                System.out.println(student);
+            } else {
+                System.out.println("Student not found.");
+            }
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid ID! Please enter a numeric ID.");
+        }
+    }
+
+    // Search by name using ArrayList
+    private static void searchByName() {
+
+        System.out.print("Enter student name to search: ");
+        String searchName = sc.nextLine().trim();
+
+        if (searchName.isEmpty()) {
+            System.out.println("Name cannot be empty.");
+            return;
+        }
+
+        boolean found = false;
+
+        for (Student student : students) {
+
+            if (student.getName().equalsIgnoreCase(searchName)) {
+                System.out.println(student);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Student not found.");
+        }
+    }
+
+    // Sort students alphabetically by name
+    private static void sortByName() {
+
+        Collections.sort(
+                students,
+                Comparator.comparing(
+                        Student::getName,
+                        String.CASE_INSENSITIVE_ORDER
+                )
+        );
+
+        System.out.println("Students sorted by name.");
+        displayStudents();
+    }
+
+    // Sort students by marks in descending order
+    private static void sortByMarks() {
+
+        students.sort(
+                Comparator.comparingDouble(Student::getMarks).reversed()
+        );
+
+        System.out.println("Students sorted by marks (highest first).");
+        displayStudents();
+    }
+}

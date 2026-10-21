@@ -1,0 +1,121 @@
+##Day 1 — Introduction to Full Stack Development ##
+
+Q.1) What is Full Stack Development?**
+-Full Stack Development means developing both the frontend and backend of a web application.
+-A full-stack developer works on:
+- Frontend – what the user sees and interacts with.
+- Backend – the server-side logic that processes requests.
+- Database – where application data is stored.
+-For example, in an online shopping website:
+- HTML, CSS, React → display the products.
+- Java and Spring Boot → process orders and payments.
+- SQL → store users, products, and orders.
+
+Q.2) What are Frontend, Backend and Database?**
+**Frontend:**
+-The frontend is the part of a website that the user can see and use.
+-Examples:
+- Buttons
+- Forms
+
+**Backend:**
+-The backend works behind the scenes.
+-It:- Receives requests from users.
+- Processes business logic.
+- Communicates with the database.
+- Sends responses back to the frontend.
+
+**Database:**
+-A database stores application data.
+-For example, a shopping application may store:
+- User names
+- Passwords
+
+Q.3) What is Client-Server Architecture?**
+-Answer:
+-Client-server architecture is a system where the client requests information or services from a server, and the server provides a response.
+
+**Client**
+-The client is usually:
+- Web browser
+- Mobile application
+- Desktop application
+
+**Server**
+The server:
+- Receives requests.
+- Processes them.
+- Communicates with databases.
+- Sends responses.
+
+Q.4) How Does a Web Application Work?**
+-A web application generally works in the following steps:
+-Step 1 – User performs an action
+-For example, the user clicks: Login
+-Step 2 – Frontend sends a request
+-The browser sends the login information to the backend.
+-Step 3 – Backend processes the request
+-Java/Spring Boot receives the request and checks the information.
+-Step 4 – Backend communicates with database
+-The backend asks the database:
+-"Does this user exist?"
+-Step 5 – Database sends information
+-The database returns the required information.
+-Step 6 – Backend sends response
+-The backend sends the result to the frontend.
+-Step 7 – Frontend displays result
+-The user sees:
+-"Login Successful"
+
+Q.5) What is Java Full Stack Development?**
+-Java Full Stack Development means using Java-based technologies for backend development along with frontend technologies to build complete web -applications.
+
+-A typical Java Full Stack application uses:
+
+Frontend
+HTML
+CSS
+JavaScript
+React.js
+       ↓
+Backend
+Java
+Spring Boot
+       ↓
+Database
+SQL
+
+Q.6) What are the main technologies used in Java Full Stack Development?**
+
+Answer:
+The main technologies are:
+1. HTML – creates the structure of web pages.
+2. CSS – designs and styles web pages.
+3. JavaScript – adds functionality and interaction.
+4. React.js – creates modern user interfaces.
+5. Java – used for backend programming.
+6. Spring Boot – used to create Java backend applications.
+7. SQL – used to communicate with databases.
+10. What is HTML?
+
+
+Q.7) Basic Client-Server Architecture Diagram**
+
+==>         CLIENT                         SERVER
+   ┌──────────────┐              ┌──────────────┐
+   │ Web Browser  │              │    Server    │
+   │   / Mobile   │              │              │
+   │     App      │              │ Backend Code │
+   └──────┬───────┘              └──────┬───────┘
+          │                             │
+          │        Request              │
+          │ ───────────────────────────>│
+          │                             │
+          │                             │
+          │        Response             │
+          │ <───────────────────────────│
+          │                             │
+   ┌──────▼───────┐              ┌──────▼───────┐
+   │    User      │              │   Database   │
+   │   Interface  │              │   (Data)     │
+   └──────────────┘              └──────────────┘

@@ -1,0 +1,415 @@
+Day 3 — Object-Oriented Programming (OOP) ##
+**1. What is OOP in Java?**
+
+OOP stands for Object-Oriented Programming.
+It is a programming approach where programs are designed using classes and objects.
+The main concepts of OOP are:
+1. Class and Object
+2. Encapsulation
+3. Inheritance
+4. Polymorphism
+5. Abstraction
+Simple example:
+Think about a Car.
+- Car is a class.
+- Your particular car is an object.
+- Color, model, speed → data
+- Start(), stop(), drive() → methods
+
+2. What is a Class?
+Question: What is a class in Java?
+Answer:
+A class is a blueprint or template for creating objects.
+It defines:
+- Variables/data
+- Methods/behavior
+Example:
+class Student {
+    String name;
+    int age;
+
+    void study() {
+        System.out.println("Student is studying");
+    }
+}
+
+Here, Student is a class.
+In simple words:
+A class is a blueprint from which objects are created.
+
+3. What is an Object?
+Question: What is an object in Java?
+Answer:
+An object is an instance of a class.
+An object contains:
+- Data
+- Methods
+Example:
+class Student {
+    String name;
+
+    void study() {
+        System.out.println("Studying");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.name = "Rahul";
+
+        System.out.println(s1.name);
+        s1.study();
+    }
+}
+
+Here:
+Student → Class
+s1      → Object
+
+Simple definition:
+A class is a blueprint, while an object is a real instance created from that blueprint.
+
+4. What is a Constructor?
+Question: What is a constructor in Java?
+Answer:
+A constructor is a special member of a class that is used to initialize an object.
+Important points:
+- Constructor has the same name as the class.
+- It does not have a return type.
+- It is automatically called when an object is created.
+- It is mainly used to initialize object data.
+Example:
+class Student {
+
+    String name;
+
+    Student() {
+        name = "Rahul";
+    }
+}
+
+When we create:
+Student s1 = new Student();
+
+The constructor is automatically called.
+
+5. What are the Types of Constructors?
+Answer:
+Commonly, constructors are classified as:
+1. No-argument constructor
+A constructor that takes no arguments.
+class Student {
+
+    Student() {
+        System.out.println("Constructor called");
+    }
+}
+
+2. Parameterized constructor
+A constructor that takes parameters.
+class Student {
+
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+}
+
+Object:
+Student s1 = new Student("Rahul");
+
+6. What is Encapsulation?
+Answer:
+Encapsulation means wrapping data and methods together inside a class and controlling direct access to the data.
+Usually, we:
+- Make variables private.
+- Use public getter and setter methods to access them.
+Example:
+class Student {
+
+    private int age;
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+Here age cannot be directly accessed from outside the class.
+Simple example:
+Think of an ATM.
+You can use buttons to access your bank account, but you cannot directly access the bank's internal database.
+In simple words:
+Encapsulation means protecting data and controlling how it is accessed.
+
+7. What are the Advantages of Encapsulation?
+Answer:
+Encapsulation provides:
+1. Data security
+2. Data hiding
+3. Controlled access
+4. Better maintainability
+5. Improved flexibility
+8. What is Inheritance?
+
+
+Question: What is inheritance in Java?
+Answer:
+Inheritance is a feature where one class acquires the properties and methods of another class.
+The existing class is called the:
+Parent/Superclass
+
+The new class is called the:
+Child/Subclass
+
+Example:
+class Animal {
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+Here:
+Animal → Parent
+Dog    → Child
+
+Dog can use the eat() method because it inherits from Animal.
+
+
+9. What is the extends Keyword?
+Question: What is extends used for in Java?
+Answer:
+The extends keyword is used to create inheritance between classes.
+Example:
+class Dog extends Animal {
+}
+
+Here Dog inherits from Animal.
+
+
+10. What are the Advantages of Inheritance?
+Answer:
+Inheritance provides:
+1. Code reusability
+2. Less duplicate code
+3. Easy maintenance
+4. Supports method overriding
+5. Creates a relationship between classes
+
+
+11. What is Polymorphism?
+Question: What is polymorphism in Java?
+Answer:
+Polymorphism means "many forms."
+It allows the same method name or interface to behave differently in different situations.
+Java mainly has two types:
+1. Compile-time polymorphism
+2. Runtime polymorphism
+
+
+12. What is Compile-Time Polymorphism?
+Answer:
+Compile-time polymorphism is mainly achieved through method overloading.
+The same method name can have different parameters.
+Example:
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+Both methods are named add, but their parameters are different.
+add(10, 20)
+add(10, 20, 30)
+This is called method overloading.
+
+
+13. What is Runtime Polymorphism?
+Answer:
+Runtime polymorphism is mainly achieved through method overriding.
+A child class provides its own implementation of a method that already exists in the parent class.
+Example:
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+Here, Dog overrides the sound() method.
+
+
+14. What is Abstraction?
+Answer:
+Abstraction means hiding implementation details and showing only the important information.
+Real-life example:
+When you drive a car, you use:
+- Steering
+- Brake
+- Accelerator
+You don't need to know the internal engine implementation to drive it.
+That's abstraction.
+
+
+15. How is Abstraction Achieved in Java?
+Answer:
+Java provides two main ways:
+1. Abstract classes
+2. Interfaces
+Abstract class example:
+abstract class Animal {
+
+    abstract void sound();
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+An abstract method does not have a method body.
+abstract void sound();
+
+A child class can provide the implementation.
+
+
+16. What is an Abstract Class?
+Answer:
+An abstract class is a class declared using the abstract keyword.
+It can contain:
+- Abstract methods
+- Normal methods
+- Variables
+- Constructors
+Example:
+abstract class Animal {
+
+    abstract void sound();
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+We generally cannot create an object directly from an abstract class.
+
+17. What are Access Modifiers?
+Answer:
+Access modifiers control where classes, methods, and variables can be accessed.
+Java has four commonly discussed access levels:
+1. public
+2. private
+3. protected
+4. Default (no modifier)
+1. Public
+Can be accessed from anywhere, subject to normal Java rules.
+public int age;
+
+2. Private
+Can be accessed only within the same class.
+private int age;
+
+3. Protected
+Can be accessed within the same package and by subclasses under Java's protected-access rules.
+protected int age;
+
+4. Default
+When no access modifier is written, access is generally limited to the same package.
+int age;
+
+19. What is a Method?
+Answer:
+A method is a block of code that performs a specific task.
+Methods help us:
+- Reuse code
+- Organize programs
+- Reduce repetition
+- Make code easier to understand
+Example:
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+Here add() is a method.
+
+
+20. What is Method Overloading?
+Question: What is method overloading in Java?
+Answer:
+Method overloading means having multiple methods with the same name but different parameter lists in the same class.
+The parameters can differ in:
+- Number
+- Type
+- Order
+Example:
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+All methods have the same name:
+add()
+But they have different parameters.
+This is method overloading.
+
+21. What is Method Overriding?
+Question: What is method overriding in Java?
+Answer:
+Method overriding occurs when a child class provides its own implementation of a method inherited from the parent class.
+Example:
+class Animal {
+
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+Here, Dog overrides the sound() method of Animal.
