@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+
+    <!-- Link CSS file to HTML -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <h2 class="logo">MyProfile</h2>
+            <a href="#contact" class="nav-link">Contact Me</a>
+        </nav>
+
+        <div class="hero-content">
+            <img src="profile.jpg" alt="My Profile Photo" class="profile-img">
+            <h1>Hello, I'm <span>Sakshi Shinde</span></h1>
+            <p>Aspiring Web Developer | Technology Enthusiast</p>
+            <a href="#about" class="btn">Know More</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a passionate learner interested in web
+                development and technology. I enjoy learning new skills
+                and creating useful projects.
+            </p>
+            <p><strong>Profession:</strong> Web Developer</p>
+            <p><strong>Location:</strong> India</p>
+        </section>
+
+        <section class="card">
+            <h2>My Skills</h2>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Angular</li>
+                <li>Java</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>My Education</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Qualification</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MCA</td>
+                            <td>COCSIT</td>
+                            <td>2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>My Hobbies</h2>
+            <ol class="hobbies">
+                <li>Reading</li>
+                <li>Listening to music</li>
+                <li>Learning new technologies</li>
+            </ol>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    sakshishinde2875@gmail.com
+                </a>
+            </p>
+
+            <form action="#" method="get" class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4"
+                          placeholder="Write your message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

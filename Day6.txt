@@ -1,0 +1,367 @@
+##Day 6 — HTML Fundamentals 
+
+
+# What is HTML?
+Answer: HTML stands for HyperText Markup Language. It is the standard markup language used to create the structure of web pages.
+
+HTML defines elements such as headings, paragraphs, images, links, tables, and forms.
+
+
+// HTML document Structure
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Welcome to HTML</h1>
+    <p>This is my first web page.</p>
+</body>
+</html>
+
+HTML stands for HyperText Markup Language. It is used to create and structure web pages. It defines elements such as headings, paragraphs, images, links, tables, and forms.
+
+Q2. Is HTML a programming language?
+
+No, HTML is a markup language, not a programming language, because it describes the structure of web content rather than implementing programming logic.
+
+Q3. What are HTML tags?
+
+HTML tags define elements on a web page. They are written inside angle brackets (<>).
+
+Example:
+<h1>Hello World</h1>
+<p>This is a paragraph.</p>
+
+Q4. What is the difference between HTML and HTML5?
+
+HTML5 is a modern version of HTML that introduced semantic elements, audio and video support, and other features for building web applications.
+
+Q5. What is the difference between a tag and an element?
+
+A tag is the markup written inside angle brackets, while an element includes the opening tag, content, and closing tag when applicable.
+
+Example:
+<p>Hello World</p>
+
+Here, <p> is the opening tag, </p> is the closing tag, and the complete structure is the paragraph element.
+2. HTML Document Structure
+Q6. What is the basic structure of an HTML document?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>This is my webpage.</p>
+</body>
+</html>
+
+Q7. What is <!DOCTYPE html>?
+
+It declares that the document uses HTML5 and helps browsers render the page in standards mode.
+
+Q8. What is the purpose of the <head> tag?
+
+The <head> element contains metadata about the document, such as its title, character encoding, viewport settings, and links to stylesheets.
+
+Q9. What is the purpose of the <body> tag?
+
+The <body> element contains the content displayed on the webpage, such as headings, paragraphs, images, and links.
+
+Q10. What is the use of the <title> tag?
+
+The <title> tag defines the webpage's title, which typically appears in the browser tab.
+
+Q11. What are HTML attributes?
+
+Attributes provide additional information about HTML elements. They are usually specified in the opening tag.
+
+//What is the difference between HTML and HTML5?
+Answer: HTML5 refers to the major revision of HTML that introduced features such as semantic elements, native audio and video support, and improved form controls.
+
+Modern HTML continues to evolve as a living standard, so HTML5 is often used informally to refer to modern HTML.
+
+//What are HTML headings?
+
+HTML provides six heading levels, from <h1> to <h6>. <h1> represents the highest-level heading, while <h6> represents the lowest-level heading.
+
+Example:
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+<h3>Smaller Subheading</h3>
+
+//What is the <p> tag?
+
+The <p> tag defines a paragraph of text.
+
+Example:
+<p>HTML is used to structure web pages.</p>
+
+1. Links in HTML
+Definition: Links in HTML are used to navigate from one webpage to another webpage, website, or a specific location within a page.
+
+We create links using the <a> (anchor) tag.
+Syntax
+<a href="URL">Link Text</a>
+
+- <a> — Defines a hyperlink.
+- href — Specifies the destination URL.
+- Link Text — The clickable text displayed on the webpage.
+
+2. Images in HTML
+Definition: Images in HTML are used to display pictures, photographs, logos, and other visual content on a webpage.
+
+We insert images using the <img> tag.
+Syntax
+<img src="image.jpg" alt="Description of image">
+
+- <img> — Defines an image element.
+- src — Specifies the image file path or URL.
+- alt — Provides alternative text describing the image.
+
+1. Lists in HTML
+Definition: Lists in HTML are used to display related items in an organized way. HTML provides three main types of lists: ordered lists, unordered lists, and description lists.
+A. Ordered List (<ol>)
+An ordered list displays items in a specific sequence, usually using numbers.
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordered List</title>
+</head>
+<body>
+    <h2>Programming Languages</h2>
+
+    <ol>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ol>
+
+</body>
+</html>
+
+Output:
+1. Java
+2. Python
+3. JavaScript
+Explanation:
+- <ol> defines an ordered list.
+- <li> defines each list item.
+B. Unordered List (<ul>)
+An unordered list displays items using bullets instead of numbers.
+
+Example:
+<h2>My Skills</h2>
+
+<ul>
+    <li>Java</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Angular</li>
+</ul>
+
+Output:
+- Java
+- HTML
+- CSS
+- Angular
+Explanation:
+- <ul> defines an unordered list.
+- <li> defines each list item.
+C. Description List (<dl>)
+A description list displays terms and their descriptions.
+
+Example:
+<dl>
+    <dt>HTML</dt>
+    <dd>Used to structure web pages.</dd>
+
+    <dt>CSS</dt>
+    <dd>Used to style web pages.</dd>
+</dl>
+
+Explanation:
+- <dl> defines the description list.
+- <dt> defines a term.
+- <dd> provides the description.
+Difference Between List Types
+Ordered List	Unordered List	Description List
+Uses <ol>.	Uses <ul>.	Uses <dl>.
+Usually displays numbers.	Usually displays bullets.	Displays terms and descriptions.
+Used when sequence matters.	Used when sequence is not important.	Used to explain terms.
+
+
+2. Tables in HTML
+Definition: An HTML table is used to organize and display data in rows and columns.
+
+For example, tables can display employee details, student marks, product information, and other structured data.
+Example of an HTML Table
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Rahul</td>
+            <td>85</td>
+        </tr>
+
+
+  1. What is an HTML Form?
+Definition: An HTML form is used to collect information from users, such as names, email addresses, passwords, phone numbers, and other details.
+
+Forms are created using the <form> tag.
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
+
+Explanation:
+- <form> defines the form.
+- <label> provides a label for an input field.
+- <input> allows the user to enter or select data.
+- <button type="submit"> submits the form.
+
+2. What Are Input Fields in HTML?
+Definition: Input fields allow users to enter information or select values in an HTML form. They are created using the <input> tag.
+Common HTML Input Types
+Input Type	Purpose	Example
+text	Accepts text	Name
+password	Accepts a password	Login password
+email	Accepts an email address	Email
+number	Accepts numeric input	Age
+tel	Accepts telephone input	Phone number
+radio	Selects one option from a group	Gender selection
+checkbox	Selects one or more options	Skills
+date	Selects a date	Date of birth
+file	Selects a file	Resume upload
+time	Selects a time	Appointment time
+range	Selects a value within a range	Volume
+color	Selects a color	Theme color
+submit	Submits the form	Submit button
+reset	Resets form controls to their initial values	Reset button
+hidden	Stores a value not displayed as a visible control	Record identifier
+
+
+Example of Different Input Fields
+<form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+1. What is Semantic HTML?
+Answer: Semantic HTML means using HTML elements that clearly describe the meaning and purpose of their content to browsers and developers.
+
+For example, <header>, <footer>, <article>, and <nav> are semantic HTML elements.
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to our website.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026</p>
+    </footer>
+
+</body>
+</html>
+
+Explanation:
+- <header> defines introductory content.
+- <nav> defines a navigation section.
+- <main> contains the main content of the page.
+- <section> groups related content.
+- <footer> defines footer information.
+
+2. What Are the Main Semantic HTML Elements?
+The following are important semantic elements frequently discussed in interviews.
+Element	Purpose
+<header>	Defines introductory content or a section header.
+<nav>	Defines a section containing navigation links.
+<main>	Defines the main content of the document.
+<section>	Groups related content into a thematic section.
+<article>	Represents self-contained content, such as a blog post.
+<aside>	Represents complementary content, such as a sidebar.
+<footer>	Defines footer information for a page or section.
+<figure>	Groups self-contained content, such as an image or diagram.
+<figcaption>	Provides a caption for a <figure>.
+<time>	Represents a date or time.

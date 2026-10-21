@@ -1,0 +1,275 @@
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6fc;
+    color: #263248;
+    line-height: 1.7;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #172554, #4f46e5, #7c3aed);
+    color: white;
+    padding: 25px 8% 65px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #4338ca;
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.profile-img {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.hero-content h1 span {
+    color: #fde68a;
+}
+
+.hero-content p {
+    color: #e0e7ff;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #fbbf24;
+    color: #1e293b;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 35px auto;
+}
+
+/* Content cards */
+.card {
+    background-color: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(30, 41, 59, 0.07);
+    border: 1px solid #e5eaf3;
+}
+
+.card h2 {
+    color: #4338ca;
+    font-size: 24px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e7ff;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card a {
+    color: #4f46e5;
+    overflow-wrap: anywhere;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.skills li {
+    background-color: #eef2ff;
+    color: #4338ca;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background-color: #4338ca;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Hobbies */
+.hobbies {
+    padding-left: 25px;
+}
+
+.hobbies li {
+    margin-bottom: 8px;
+}
+
+/* Education table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    border: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #4338ca;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #f8fafc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+    background-color: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #172554;
+    color: #e0e7ff;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    .hero {
+        padding: 20px 5% 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 22px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}
