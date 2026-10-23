@@ -1,0 +1,149 @@
+1. What is JavaScript?
+JavaScript is a high-level programming language used to make web pages interactive and dynamic.
+
+It is one of the core technologies of web development, along with HTML and CSS.
+- HTML: Defines the structure of a web page.
+- CSS: Defines the design and appearance of a web page.
+- JavaScript: Adds functionality and interactivity to a web page.
+
+Features of JavaScript
+1. Lightweight: JavaScript is relatively lightweight and widely used for web development.
+2. Dynamic: Variables can hold values of different types.
+3. Interactive: It responds to user actions such as clicks and keyboard input.
+4. Event-driven: It can execute functions when events occur.
+5. Object-based: It supports objects and object-oriented programming concepts.
+6. Cross-platform: It runs in modern web browsers and can also run outside browsers.
+7. Asynchronous programming: It supports asynchronous operations using Promises and async/await.
+8. Full-stack development: With technologies such as Node.js, JavaScript can be used for both frontend and backend development.
+
+2) JavaScript Variables: var, let, and const
+In JavaScript, variables are used to store data such as names, numbers, salaries, and employee information.
+
+JavaScript provides three keywords to declare variables:
+1. var
+2. let
+3. const
+
+1. What is var?
+-var is used to declare variables in JavaScript.
+-It allows the value of a variable to be changed (reassigned).
+-It allows a variable to be redeclared within the same scope.
+-It is function-scoped, not block-scoped.
+-It is hoisted and initialized with undefined.
+Example:
+var name = "Rahul";
+var name = "Amit";
+console.log(name);
+
+2. What is let?
+-let is used to declare variables whose values may change.
+-It allows the value of a variable to be reassigned.
+-It does not allow redeclaration within the same scope.
+-It is block-scoped, meaning it is accessible only within the block where it is declared.
+-It cannot be accessed before its declaration is evaluated.
+Example:
+let age = 20;
+age = 25;
+console.log(age);
+
+3. What is const?
+1. const is used to declare variables that cannot be reassigned.
+2. It must be initialized when it is declared.
+3. It does not allow redeclaration within the same scope.
+4. It is block-scoped, meaning it is accessible only within the block where it is declared.
+5. Objects and arrays declared with const can have their contents modified, but the variable cannot be reassigned.
+Example:
+const country = "India";
+console.log(country);
+
+#Data types in Javascript
+Data types in JavaScript define the type of value a variable can store. JavaScript has different data types to represent text, numbers, logical values, objects, and other kinds of information.
+
+1. String: Used to store text, such as names and addresses. Example: let name = "Rahul";
+2. Number: Used to store integers and decimal numbers. Example: let age = 25;
+3. Boolean: Used to store logical values, either true or false. Example: let isStudent = true;
+4. Undefined and Null: undefined indicates that a variable has been declared but has not been assigned a value. null represents the intentional absence of a value.
+5. Object and Other Types: JavaScript supports objects, arrays, BigInt, and Symbol. Objects store data in key-value pairs, while arrays store ordered collections of values.
+Example
+let name = "Rahul";             // String
+let age = 25;                   // Number
+let isStudent = true;           // Boolean
+let address;                    // Undefined
+let salary = null;              // Null
+let employee = { id: 101 };     // Object
+let marks = [80, 90, 95];       // Array
+
+#Operators in JavaScript
+Operators in JavaScript are special symbols used to perform operations on variables and values. They are used for calculations, comparisons, assigning values, and combining conditions.
+
+Arithmetic Operators: Used to perform mathematical operations such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).
+
+Assignment Operators: Used to assign values to variables. Examples include =, +=, -=, and *=.
+
+Comparison Operators: Used to compare two values and return a Boolean result (true or false). Examples include ==, ===, !=, >, and <.
+
+Logical Operators: Used to combine or reverse conditions. The main operators are AND (&&), OR (||), and NOT (!).
+
+Increment and Decrement Operators: Used to increase or decrease a numeric value by one. Examples include increment (++) and decrement (--).
+
+let a = 10;
+let b = 5;
+
+// Arithmetic
+console.log(a + b);   // 15
+
+// Assignment
+a += 2;
+console.log(a);       // 12
+
+// Comparison
+console.log(a > b);   // true
+
+// Logical
+console.log(a > 5 && b < 10); // true
+
+// Increment
+b++;
+console.log(b);       // 6
+
+# Conditional statements 
+Conditional statements in JavaScript are used to execute different blocks of code depending on whether a specified condition is true or false. They help a program make decisions based on different situations.
+
+if Statement: Executes a block of code when the specified condition is true.
+
+if-else Statement: Executes one block of code if the condition is true and another block if it is false.
+
+else if Statement: Checks multiple conditions one by one and executes the block for the first condition that is true.
+
+switch Statement: Executes a particular block of code based on the matching value of an expression.
+
+Ternary Operator (? :): A shorthand way to choose between two expressions based on a condition.
+
+# Loops in Javascript
+Loops in JavaScript are used to execute a block of code repeatedly as long as a specified condition is satisfied. They help reduce code repetition and make programs more efficient.
+
+for Loop: Used to execute a block of code a specific number of times, usually when the number of iterations is known.
+
+while Loop: Executes a block of code repeatedly as long as the given condition is true.
+
+do-while Loop: Executes the code block at least once before checking the condition.
+
+for...of Loop: Used to iterate over values of iterable objects, such as arrays and strings.
+
+for...in Loop: Used to iterate over the enumerable property keys of an object.
+
+// For loop
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+output:
+1
+2
+3
+4
+5
+
+
+
+
+

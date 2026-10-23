@@ -1,0 +1,463 @@
+
+/* 1. Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #243047;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+/* 2. Navigation bar */
+.navbar {
+    background-color: #153e75;
+    color: white;
+    min-height: 72px;
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #9ed0ff;
+}
+
+/* 3. Main container */
+.container {
+    width: min(1100px, 90%);
+    margin: 35px auto;
+}
+
+/* 4. Personal profile section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 40px;
+    background: linear-gradient(135deg, #dceeff, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(21, 62, 117, 0.08);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #153e75;
+    color: white;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.profile-info {
+    min-width: 0;
+}
+
+.eyebrow {
+    color: #2475c5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.profile-info h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    color: #153e75;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 19px;
+    font-weight: normal;
+    color: #4d6079;
+    margin-bottom: 15px;
+}
+
+.profile-info > p:not(.eyebrow) {
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-details p {
+    margin-bottom: 7px;
+}
+
+.contact-details a {
+    color: #1767b1;
+}
+
+/* 5. Buttons */
+.primary-button {
+    display: inline-block;
+    background-color: #1769c2;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #104d91;
+    transform: translateY(-2px);
+}
+
+.primary-button:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f5b942;
+    outline-offset: 3px;
+}
+
+/* 6. Common section styles */
+.section {
+    margin-top: 45px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.contact-section h2 {
+    color: #153e75;
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #68778c;
+}
+
+/* 7. Flexbox cards */
+.card-container {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 250px;
+    min-width: 0;
+    padding: 28px 24px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e0e8f2;
+    box-shadow: 0 4px 12px rgba(21, 62, 117, 0.05);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(21, 62, 117, 0.12);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #153e75;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #65748a;
+    font-size: 15px;
+}
+
+/* 8. Registration form */
+.registration-form {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 14px;
+    border: 1px solid #e0e8f2;
+    box-shadow: 0 5px 20px rgba(21, 62, 117, 0.07);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.form-group label {
+    color: #243047;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input:not([type="checkbox"]),
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccd7e5;
+    border-radius: 7px;
+    background-color: white;
+    color: #243047;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1769c2;
+    box-shadow: 0 0 0 3px rgba(23, 105, 194, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: normal !important;
+}
+
+.checkbox-label input {
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* 9. Contact section */
+.contact-section {
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 45px;
+    background-color: #e4effc;
+    border-radius: 14px;
+}
+
+.contact-section p {
+    margin-bottom: 18px;
+    color: #52657e;
+}
+
+.contact-section a {
+    color: #1769c2;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* 10. Footer */
+.footer {
+    background-color: #153e75;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* 11. Tablet responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 14px 20px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 22px;
+    }
+
+    .contact-details {
+        text-align: left;
+    }
+
+    .card-container {
+        gap: 16px;
+    }
+
+    .card {
+        flex-basis: 220px;
+    }
+
+    .registration-form {
+        padding: 24px;
+    }
+}
+
+/* 12. Mobile responsiveness */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 18px 4%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .profile-section {
+        gap: 20px;
+        padding: 25px 16px;
+    }
+
+    .avatar {
+        width: 115px;
+        height: 115px;
+        font-size: 32px;
+    }
+
+    .profile-info h2 {
+        font-size: 17px;
+    }
+
+    .contact-details {
+        font-size: 14px;
+    }
+
+    .section {
+        margin-top: 32px;
+    }
+
+    .section-heading h2,
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 22px;
+    }
+
+    .registration-form {
+        padding: 20px 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .primary-button {
+        padding: 12px 16px;
+    }
+}

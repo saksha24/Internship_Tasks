@@ -34,10 +34,6 @@ Example:
 <h1>Hello World</h1>
 <p>This is a paragraph.</p>
 
-Q4. What is the difference between HTML and HTML5?
-
-HTML5 is a modern version of HTML that introduced semantic elements, audio and video support, and other features for building web applications.
-
 Q5. What is the difference between a tag and an element?
 
 A tag is the markup written inside angle brackets, while an element includes the opening tag, content, and closing tag when applicable.
@@ -365,3 +361,10 @@ Element	Purpose
 <figure>	Groups self-contained content, such as an image or diagram.
 <figcaption>	Provides a caption for a <figure>.
 <time>	Represents a date or time.
+
+
+Q4. What is the difference between HTML and HTML5?
+
+HTML5 is a modern version of HTML that introduced semantic elements, audio and video support, and other features for building web applications.
+
+"HTML is a markup language used to structure web pages. HTML5 is a major revision of HTML that introduced semantic elements, native audio and video support, additional form input types, canvas graphics, and browser storage APIs. It also simplified the DOCTYPE declaration to <!DOCTYPE html>, making it easier to develop modern web applications."

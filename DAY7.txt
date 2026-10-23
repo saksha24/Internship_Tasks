@@ -1,0 +1,157 @@
+//1) WHAT is CSS?
+-> “CSS stands for Cascading Style Sheets. It is used to style HTML elements and improve the appearance of a website. With CSS, we can change colors, fonts, backgrounds, margins, padding, and layouts. It also helps us create responsive websites that work on different screen sizes. There are three ways to apply CSS: inline CSS, internal CSS, and external CSS.”
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction to CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+
+    <p>CSS makes webpages attractive.</p>
+
+</body>
+</html>
+
+1. Inline CSS
+Definition: Inline CSS is used to apply styles directly to an HTML element using the style attribute.
+
+Example:
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 style="color: blue;">Welcome to CSS</h1>
+    <p style="font-size: 18px;">This is a paragraph.</p>
+</body>
+</html>
+
+2. Internal CSS
+Definition: Internal CSS is written inside the <style> tag in the <head> section of an HTML document.
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        p {
+            font-size: 18px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+
+3. External CSS
+Definition: External CSS is written in a separate .css file and connected to an HTML document using the <link> tag.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to CSS</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+
+
+##CSS file
+h1 {
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    color: blue;
+}
+
+1. What are Colors in CSS?
+Definition: Colors in CSS are used to set the color of text, backgrounds, borders, and other HTML elements to make a webpage attractive and readable.
+
+CSS supports different ways to specify colors:
+- Color names: red, blue, green
+- HEX values: #FF0000, #0000FF
+- RGB values: rgb(255, 0, 0)
+- RGBA values: rgba(255, 0, 0, 0.5)
+- HSL values: hsl(0, 100%, 50%)
+
+2. What are Backgrounds in CSS?
+Definition: CSS backgrounds are used to style the background of HTML elements by adding colors, images, and controlling their position, size, and repetition.
+
+Important CSS background properties:
+Property	                Purpose
+background-color	    Sets the background color
+background-image    	Adds a background image
+
+1. What is Margin in CSS?
+Definition: Margin is the space outside an HTML element's border. It is used to create distance between an element and other elements.
+exapmle: margin: 30px;
+
+2. What is Padding in CSS?
+Definition: Padding is the space between an element's content and its border. It is used to create space inside an element.
+
+1. What is the CSS Box Model?
+Definition: The CSS Box Model is a concept in CSS that describes how every HTML element is represented as a rectangular box. It consists of four parts: Content, Padding, Border, and Margin.
+
+2. Four parts of the Box Model
+1. Content: The actual text, image, or other content inside an element.
+2. Padding: The space between the content and the border.
+3. Border: The line surrounding the content and padding.
+4. Margin: The space outside the border that separates elements.
+
+3. Example of the CSS Box Model
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 15px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is the CSS Box Model.
+    </div>
+</body>
+</html>
+
+1. What is Flexbox in CSS?
+Definition: Flexbox, also known as the Flexible Box Layout, is a CSS layout model used to arrange elements in a row or column. It helps align items, distribute space, and create flexible, responsive web layouts.
+
+Flexbox is especially useful for centering elements and arranging items evenly without using floats or complicated positioning.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
+
+

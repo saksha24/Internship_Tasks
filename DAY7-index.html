@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Portal</title>
+    <link rel="stylesheet" href="DAY7-style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#home" class="logo">Student Portal</a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#features">Features</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Personal Profile Section -->
+        <section id="home" class="profile-section">
+            <div class="avatar" aria-hidden="true">SS</div>
+
+            <div class="profile-info" id="profile">
+                <p class="eyebrow">WELCOME TO MY PROFILE</p>
+                <h1>Sakshi Shinde</h1>
+                <h2>MCA Student | Full Stack Developer</h2>
+
+                <p>
+                    Motivated software developer interested in building
+                    responsive web applications using Java, Spring Boot,
+                    Angular and MySQL.
+                </p>
+
+                <div class="contact-details">
+                    <p><strong>Email:</strong>
+                        <a href="mailto:sakshishinde50000@gmail.com">
+                            shindesakshi2875@gmail.com
+                        </a>
+                    </p>
+                    <p><strong>Location:</strong> Pune, Maharashtra</p>
+                    <p><strong>Skills:</strong> Java, Angular, SQL, HTML, CSS</p>
+                </div>
+
+                <a class="primary-button"
+                   href="https://github.com/saksha24"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- Features / Flexbox Cards -->
+        <section id="features" class="section">
+            <div class="section-heading">
+                <h2>My Skills & Interests</h2>
+                <p>Technologies I use to develop applications</p>
+            </div>
+
+            <div class="card-container">
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">☕</div>
+                    <h3>Java Development</h3>
+                    <p>
+                        Building application logic using Java,
+                        OOP concepts and Spring Boot.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Creating responsive user interfaces
+                        using HTML, CSS and Angular.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🗄️</div>
+                    <h3>Database Management</h3>
+                    <p>
+                        Storing and retrieving application data
+                        using MySQL and SQL queries.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Student Registration Form -->
+        <section id="register" class="section">
+            <div class="section-heading">
+                <h2>Student Registration</h2>
+                <p>Fill in the details below</p>
+            </div>
+
+            <form class="registration-form"
+                  action="#register"
+                  method="get">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text"
+                               id="fullName"
+                               name="fullName"
+                               placeholder="Enter your full name"
+                               minlength="2"
+                               autocomplete="name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               placeholder="Enter 10-digit mobile number"
+                               pattern="[0-9]{10}"
+                               inputmode="numeric"
+                               autocomplete="tel"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Select Course *</label>
+                        <select id="course" name="course" required>
+                            <option value="">Choose a course</option>
+                            <option value="MCA">MCA</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BSc">B.Sc.</option>
+                            <option value="BTech">B.Tech</option>
+                            <option value="MTech">M.Tech</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date"
+                               id="dob"
+                               name="dob"
+                               autocomplete="bday"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Choose an option</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-say">
+                                Prefer not to say
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Address</label>
+                        <textarea id="address"
+                                  name="address"
+                                  rows="3"
+                                  placeholder="Enter your address"
+                                  autocomplete="street-address"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox"
+                                   name="terms"
+                                   required>
+                            I confirm that the information provided is correct.
+                        </label>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-button submit-button">
+                    Register Now
+                </button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Let's Connect</h2>
+            <p>
+                Interested in software development and full stack
+                opportunities.
+            </p>
+            <a href="mailto:sakshishinde50000@gmail.com">
+                Contact Me
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sakshi Shinde | Student Profile Portal</p>
+    </footer>
+
+</body>
+</html>
