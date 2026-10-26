@@ -1,0 +1,79 @@
+1. DOM Manipulation
+Q. What is DOM manipulation in JavaScript?
+1. DOM stands for Document Object Model.
+2. It represents an HTML page as a tree of objects.
+3. JavaScript can change HTML elements, content, and styles dynamically.
+4. getElementById() and querySelector() select HTML elements.
+5. Example: document.getElementById("title").textContent = "Hello";
+
+2. Event Handling
+Q. What is event handling in JavaScript?
+1. Event handling allows JavaScript to respond to user actions.
+2. Common events include click, submit, mouseover, and keydown.
+3. addEventListener() attaches an event handler to an element.
+4. event.preventDefault() prevents the browser's default action.
+5. Example: button.addEventListener("click", () => alert("Clicked!"));
+
+3. Array Methods: map(), filter(), and reduce()
+Q. What are the map(), filter(), and reduce() methods?
+1. map() creates a new array by transforming each element.
+2. filter() creates a new array containing elements that satisfy a condition.
+3. reduce() combines array elements into a single accumulated result.
+4. These methods help write concise and readable code.
+5. Example: [1,2,3].map(n => n * 2) returns [2,4,6].
+
+4. ES6 Features
+Q. What are ES6 features in JavaScript?
+1. ES6 stands for ECMAScript 2015, a major JavaScript update.
+2. It introduced let and const for variable declarations.
+3. It introduced arrow functions and template literals.
+4. It supports destructuring, spread operators, and rest parameters.
+5. It introduced classes and improved support for modules and promises.
+
+5. Arrow Functions
+Q. What are arrow functions in JavaScript?
+1. Arrow functions provide a shorter syntax for writing functions.
+2. They use the => symbol.
+3. They can have implicit returns for single expressions.
+4. They inherit this from their surrounding lexical scope.
+5. Example: const add = (a, b) => a + b;
+
+6. Destructuring
+Q. What is destructuring in JavaScript?
+1. Destructuring extracts values from arrays or properties from objects.
+2. It allows multiple variables to be declared in one statement.
+3. Array destructuring uses square brackets [].
+4. Object destructuring uses curly braces {}.
+5. Example: const { name, age } = { name: "Sam", age: 22 };
+
+7. Spread and Rest Operators
+Q. What are spread and rest operators in JavaScript?
+1. Both use three dots: ....
+2. The spread operator expands array elements or object properties.
+3. The rest operator collects multiple values into a single array or object pattern.
+4. Spread is commonly used for copying and merging arrays or objects.
+5. Example: const copy = [...[1, 2, 3]];
+
+8. Promises and Asynchronous JavaScript
+Q. What are promises and asynchronous JavaScript?
+1. Asynchronous JavaScript allows tasks to proceed without blocking other code while waiting for results.
+2. A Promise represents the eventual success or failure of an operation.
+3. A Promise can be pending, fulfilled, or rejected.
+4. .then() handles successful results, while .catch() handles errors.
+5. Example: Promise.resolve("Success").then(result => console.log(result));
+
+9. Async and Await
+Q. What are async and await in JavaScript?
+1. async declares a function that returns a Promise.
+2. await pauses execution within an async function until a Promise settles.
+3. It makes asynchronous code easier to read.
+4. try...catch can handle errors in async operations.
+5. Example: const response = await fetch(url);
+
+10. Fetch API Basics
+Q. What is the Fetch API in JavaScript?
+1. The Fetch API is used to make HTTP requests to servers.
+2. fetch() returns a Promise that resolves to a Response object.
+3. response.json() reads and parses JSON response data.
+4. response.ok helps check whether the HTTP status indicates success.
+5. Example: fetch(url).then(response => response.json()).then(data => console.log(data));

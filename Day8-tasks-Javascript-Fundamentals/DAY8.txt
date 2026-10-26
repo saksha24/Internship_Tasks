@@ -143,6 +143,72 @@ output:
 4
 5
 
+7)Functions in javascript
+
+A function in JavaScript is a reusable block of code designed to perform a specific task. A function executes when it is called, and it can accept inputs called parameters and return a result.
+
+-Code Reusability: Functions allow us to reuse the same code multiple times without writing it again.
+
+Function Declaration: A function is defined using the function keyword, followed by its name, parameters, and code block.
+
+Parameters and Arguments: Parameters are variables defined in a function, while arguments are the actual values passed when calling it.
+
+Return Statement: The return statement sends a result back to the code that called the function.
+
+Types of Functions: JavaScript supports named functions, anonymous functions, arrow functions, and callback functions.
+EXAMPLE:
+function add(a, b) {
+    return a + b;
+}
+let result = add(10, 20);
+console.log(result);
+
+output:30
+
+1. Arrays in JavaScript
+An array in JavaScript is a data structure used to store multiple values in a single variable. Arrays are ordered, and each element is accessed using an index that starts from 0.
+Multiple Values: Arrays can store multiple values in a single variable.
+
+Indexing: Array indexing starts from 0, so the first element is at index 0.
+
+Different Data Types: An array can contain different data types, such as strings, numbers, and Boolean values.
+
+Mutable: Array elements can be added, removed, or modified.
+
+Array Methods: JavaScript provides methods such as push(), pop(), shift(), and unshift() to manipulate arrays.
+
+EXAMPLE:
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits[0]); // Apple
+fruits.push("Orange");
+console.log(fruits);
+output:
+Apple
+["Apple", "Banana", "Mango", "Orange"]
+
+2. Objects in JavaScript
+An object in JavaScript is a data structure used to store related information in the form of key-value pairs. Each key is a property name, and its associated value can be of any JavaScript data type.
+
+Key-Value Pairs: Objects store data as properties with keys and corresponding values.
+
+Property Access: Object properties can be accessed using dot notation or bracket notation.
+
+Different Data Types: Object properties can contain strings, numbers, arrays, functions, and other objects.
+
+Mutable: Object properties can be added, updated, or deleted.
+
+1. Methods: Objects can contain functions as properties; these functions are commonly called methods.
+
+EXAMPLE:
+let employee = {
+    id: 101,
+    name: "Rahul",
+    department: "IT"
+};
+
+console.log(employee.name); // Rahul
+employee.department = "HR";
+console.log(employee.department); // HR
 
 
 

@@ -1,0 +1,55 @@
+1. What is React.js?
+1. React.js is a JavaScript library used to build user interfaces.
+2. It was developed by Facebook, now known as Meta.
+3. React is commonly used to create single-page applications (SPAs).
+4. It uses reusable components to build web pages.
+5. React updates the user interface efficiently when data changes.
+
+2. What are the advantages of React?
+1. Reusable components: Components can be reused across different pages.
+2. Virtual DOM: React efficiently updates the user interface.
+3. Declarative UI: Developers describe how the UI should look for a given state.
+4. One-way data flow: Data typically flows from parent components to child components through props.
+5. Large ecosystem: React has many libraries, tools, and community resources.
+
+3. What are components in React?
+1. Components are independent, reusable building blocks of a React application.
+2. Each component represents a part of the user interface.
+3. Components can contain HTML-like JSX and JavaScript logic.
+4. Components can receive data through props.
+5. Examples include Header, Navbar, LoginForm, and Footer.
+
+4. What is JSX in React?
+1. JSX stands for JavaScript XML.
+2. It allows developers to write HTML-like syntax inside JavaScript.
+3. JSX makes React UI code easier to read and understand.
+4. JavaScript expressions can be included inside curly braces {}.
+5. Example: const element = <h1>Hello, World!</h1>;
+
+5. What are functional components in React?
+1. Functional components are JavaScript functions that return React elements.
+2. They are the standard way to create components in modern React.
+3. They can accept props as function parameters.
+4. Hooks such as useState and useEffect provide state and lifecycle-related functionality.
+5. Example: function Welcome() { return <h1>Hello!</h1>; }
+
+6. What are props in React?
+1. Props stands for properties.
+2. Props pass data from a parent component to a child component.
+3. Props can contain strings, numbers, arrays, objects, functions, and other values.
+4. Props are read-only; a component should not modify its received props.
+5. Example: function Welcome(props) { return <h1>Hello, {props.name}</h1>; }
+
+7. What is Vite?
+1. Vite is a frontend development tool used to build modern web applications.
+2. It provides a fast development server.
+3. It supports React and other frontend frameworks.
+4. It offers fast hot module replacement (HMR) during development.
+5. It provides a production build command to generate optimized files.
+
+8. What is the project structure in React?
+1. node_modules/ contains installed project dependencies.
+2. public/ contains static assets served directly.
+3. src/ contains the main application source code and components.
+4. src/App.jsx usually contains the main application component, while src/main.jsx initializes React.
+5. package.json stores project metadata, dependencies, and scripts such as dev and build.
