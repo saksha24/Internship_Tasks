@@ -1,0 +1,121 @@
+1. Introduction to React Router
+1. React Router is a library used to manage navigation between different pages or views in a React application.
+2. It allows developers to create a Single Page Application (SPA) with multiple routes.
+3. It updates the displayed component when the URL changes without reloading the entire page.
+4. It supports static routes, dynamic routes, nested routes, and navigation between components.
+5. Install it in a React project using npm install react-router-dom.
+Example:
+npm install react-router-dom
+
+
+2. BrowserRouter
+1. BrowserRouter is a component that enables browser-based routing in a React application.
+2. It uses the browser History API to manage navigation and URL changes.
+3. It should wrap the components that need access to React Router.
+4. It allows URLs such as /about, /students, and /contact.
+5. In a typical application, it is configured once in main.jsx.
+Example:
+import { BrowserRouter } from 'react-router-dom';
+
+<BrowserRouter>
+  <App />
+</BrowserRouter>
+
+
+3. Routes and Route
+1. Routes is a component that contains the route definitions for your application.
+2. Route maps a URL path to the component that should be rendered.
+3. The path property specifies the URL pattern.
+4. The element property specifies the React component to display.
+5. A wildcard route (*) can handle URLs that do not match any defined route.
+Example:
+import { Routes, Route } from 'react-router-dom';
+
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/students" element={<Students />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
+
+
+4. Link and NavLink
+1. Link is used to navigate between routes without a full-page reload.
+2. NavLink works similarly to Link but also provides an active state for the current route.
+3. Both components use the to property to specify the destination URL.
+4. They provide client-side navigation and preserve the React application state when applicable.
+5. NavLink is especially useful for navigation menus because you can style the active link.
+Example:
+import { Link, NavLink } from 'react-router-dom';
+
+<Link to="/about">About</Link>
+
+<NavLink to="/students">Students</NavLink>
+
+
+5. Navigation Between Pages
+1. Navigation allows users to move between different pages or views in a React application.
+2. React Router supports navigation using Link and NavLink.
+3. The URL changes when a user clicks a navigation link.
+4. React Router renders the component matching the new URL without reloading the entire document.
+5. Navigation can be tested by visiting routes such as /, /about, /students, and /contact.
+Example:
+import { Link } from 'react-router-dom';
+
+function Home() {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <Link to="/about">Go to About</Link>
+    </div>
+  );
+}
+
+
+6. Dynamic Route Parameters
+1. Dynamic route parameters allow a route to accept variable values in its URL.
+2. A parameter is defined by placing a colon (:) before its name in the route path.
+3. The useParams() hook retrieves the parameter values from the current URL.
+4. Dynamic routes are useful for displaying individual student profiles, product details, or user information.
+5. Different parameter values can render different data using the same React component.
+Example:
+import { Routes, Route, useParams } from 'react-router-dom';
+
+function StudentDetails() {
+  const { id } = useParams();
+
+  return <h1>Student ID: {id}</h1>;
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route
+        path="/students/:id"
+        element={<StudentDetails />}
+      />
+    </Routes>
+  );
+}
+
+
+If you visit /students/101, the page displays Student ID: 101.
+
+7. Basic 404 Page
+1. A 404 page is displayed when a user visits a URL that does not match any defined route.
+2. React Router can handle unknown URLs using a wildcard route with path="*".
+3. A custom NotFound component can display an appropriate error message.
+4. The page can provide a link that allows users to return to the Home page.
+5. A custom 404 page improves the application's usability by helping users recover from incorrect URLs.
+Example:
+import { Link } from 'react-router-dom';
+
+function NotFound() {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>The requested page does not exist.</p>
+      <Link to="/">Back to Home</Link>
+    </div>
+  );
+}

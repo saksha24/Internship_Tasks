@@ -1,0 +1,108 @@
+1. Introduction to Databases
+1. A database is an organized collection of data stored electronically.
+2. It helps users store, manage, retrieve, update, and delete data efficiently.
+3. Databases are used in banking systems, colleges, hospitals, e-commerce, and HR management systems.
+4. A Database Management System (DBMS) is software used to interact with databases.
+5. Examples of DBMS software include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server.
+Example: A college database stores student names, roll numbers, marks, and attendance records.
+
+
+2. Relational Databases
+1. A relational database stores data in tables consisting of rows and columns.
+2. Each table represents a particular entity, such as students, employees, or departments.
+3. Tables can be connected using primary keys and foreign keys.
+4. SQL (Structured Query Language) is commonly used to manage relational databases.
+5. Relational databases help maintain data consistency and reduce unnecessary duplication.
+Example: A college database may contain separate Students, Courses, and Enrollments tables connected through keys.
+
+
+3. Tables, Rows, and Columns
+1. A table is a structure used to organize related data in a database.
+2. A row represents one complete record in a table.
+3. A column represents a particular attribute or property of the data.
+4. Each column has a name and a data type, such as INT, VARCHAR, or DATE.
+5. Tables make data easier to organize, search, update, and analyze.
+
+4. Primary Keys and Foreign Keys
+1. A primary key uniquely identifies each record in a table.
+2. A primary key must contain unique values and cannot contain NULL.
+3. A foreign key is a column or set of columns that references a key in another table, usually its primary key.
+4. Foreign keys help maintain referential integrity between related tables.
+5. A table can have only one primary key constraint, which may consist of multiple columns, and it can have multiple foreign key constraints.
+
+5. Relationships Between Tables
+1. Relationships connect tables using related columns, commonly primary and foreign keys.
+2. A one-to-one relationship means one record is associated with at most one record in another table.
+3. A one-to-many relationship means one record can be associated with multiple records in another table.
+4. A many-to-many relationship means multiple records in each table can be associated with multiple records in the other table; a junction table is generally used.
+5. Relationships reduce duplication and help maintain consistency in database design.
+Examples:
+- One-to-one: One user and one user profile.
+- One-to-many: One department has many employees.
+- Many-to-many: Many students enroll in many courses, using an Enrollments table.
+
+6. Introduction to PostgreSQL / MySQL
+1. MySQL and PostgreSQL are popular relational database management systems (RDBMS).
+2. Both support SQL for creating tables and inserting, retrieving, updating, and deleting data.
+3. MySQL is widely used in web applications and business systems.
+4. PostgreSQL is known for its strong SQL support, extensibility, and advanced data types.
+5. Both support transactions, constraints, indexes, and relationships between tables, although some features and syntax differ.
+Example SQL query:
+SELECT * FROM Students;
+
+7. Database Design Basics
+1. Database design is the process of planning tables, columns, keys, relationships, and constraints before storing data.
+2. Identify the main entities, such as Students, Courses, Employees, or Departments.
+3. Choose suitable data types and define primary keys for tables.
+4. Establish relationships using foreign keys and apply constraints to maintain data integrity.
+5. Use normalization to reduce unnecessary data duplication and prevent insertion, update, and deletion anomalies.
+Example: Instead of storing a department name repeatedly for every employee, create a separate Departments table and reference it using Department_ID.
+8. ER Diagrams (Entity-Relationship Diagrams)
+1. An ER diagram is a visual representation of entities, their attributes, and relationships.
+2. An entity represents an object or concept, such as Student, Employee, or Department.
+3. An attribute describes an entity, such as Student_ID, Name, or Email.
+4. Relationships show how entities are associated, such as one department having many employees.
+5. ER diagrams help developers plan database structure before implementing tables in a DBMS.
+Example ER diagram:
+                       ---------------------
+                       |   DEPARTMENT      |
+                        --------------------
+                                 |
+                      -----------------------         
+                      | PK: Department_ID   |
+                      | Department_Name     |
+                      -----------------------
+                                |
+                      One-to-many relationship
+                        -------------------
+                        |                  |
+                  ---------------------------------
+                  |       EMPLOYEE                |
+                  |     PK: Employee_ID           |
+                  |         Name                  |
+                  |    FK: Department_ID          |
+                  ---------------------------------
+
+Create Table Command
+
+CREATE DATABASE student_management;
+
+USE student_management;
+
+CREATE TABLE Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15),
+    date_of_birth DATE,
+    admission_date DATE NOT NULL
+);
+
+INSERT INTO Students
+(first_name, last_name, email, phone, date_of_birth, admission_date)
+VALUES
+('Rahul', 'Patil', 'rahul@example.com', '9876543210',
+ '2004-05-10', '2026-06-01'),
+('Priya', 'Sharma', 'priya@example.com', '9876543211',
+ '2005-02-15', '2026-06-02');
