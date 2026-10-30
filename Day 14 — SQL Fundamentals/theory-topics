@@ -1,0 +1,55 @@
+1. Introduction to SQL
+1. SQL stands for Structured Query Language.
+2. SQL is used to store, manage, retrieve, and manipulate data in databases.
+3. SQL is commonly used with MySQL, Oracle, PostgreSQL, and SQL Server.
+4. SQL allows users to perform operations like INSERT, UPDATE, DELETE, and SELECT.
+5. SQL is used in applications such as banking systems, HRMS, e-commerce, and student management systems.
+
+2. CREATE, ALTER, and DROP
+1. CREATE is used to create new database objects such as tables and databases.
+2. ALTER is used to modify the structure of an existing table.
+3. DROP is used to permanently delete a table or database.
+4. CREATE, ALTER, and DROP are commands of DDL (Data Definition Language).
+5. Example: CREATE TABLE Student (id INT, name VARCHAR(50));
+
+3. INSERT, UPDATE, and DELETE
+1. INSERT is used to add new records into a table.
+2. UPDATE is used to modify existing records.
+3. DELETE is used to remove records from a table.
+4. INSERT, UPDATE, and DELETE are commands of DML (Data Manipulation Language).
+5. Always use a WHERE condition with UPDATE and DELETE when you want to modify or remove specific records.
+
+4. SELECT
+1. SELECT is used to retrieve data from a database table.
+2. SELECT * FROM Student; retrieves all columns and records.
+3. SELECT name FROM Student; retrieves only the name column.
+4. SELECT can retrieve data from one or multiple tables.
+5. SELECT is a DQL (Data Query Language) command.
+
+5. WHERE, ORDER BY, and LIMIT
+1. WHERE is used to retrieve records that match a specified condition.
+2. ORDER BY is used to sort records in ascending (ASC) or descending (DESC) order.
+3. LIMIT is used to restrict the number of records returned.
+4. These clauses are commonly used together in SELECT queries.
+5. Example: SELECT * FROM Student WHERE marks > 70 ORDER BY marks DESC LIMIT 5;
+
+6. Filtering Records
+1. Filtering means retrieving only the records that satisfy specific conditions.
+2. The WHERE clause is commonly used for filtering records.
+3. AND is used when all specified conditions must be true.
+4. OR is used when at least one specified condition must be true.
+5. Operators like BETWEEN, IN, LIKE, and IS NULL are used for advanced filtering.
+
+7. Constraints
+1. Constraints are rules applied to table columns to maintain data accuracy and integrity.
+2. NOT NULL ensures that a column cannot contain NULL values.
+3. UNIQUE ensures that all values in a column are unique.
+4. CHECK ensures that values satisfy a specified condition.
+5. DEFAULT assigns a default value when no value is provided.
+
+8. Primary and Foreign Keys
+1. A Primary Key uniquely identifies each record in a table.
+2. A Primary Key cannot contain NULL or duplicate values.
+3. A Foreign Key is used to establish a relationship between two tables.
+4. A Foreign Key references the Primary Key or a unique key in another table.
+5. Primary and Foreign Keys help maintain referential integrity in relational databases.
