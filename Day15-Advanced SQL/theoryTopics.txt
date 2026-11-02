@@ -1,0 +1,92 @@
+1. Aggregate Functions
+1. Aggregate functions perform calculations on multiple rows and return a single result.
+2. COUNT() is used to count the number of rows.
+3. SUM() calculates the total of a numeric column.
+4. AVG() calculates the average value, while MIN() and MAX() find the minimum and maximum values.
+5. Aggregate functions are commonly used with GROUP BY to calculate results for different groups.
+Example:
+SELECT AVG(salary) FROM employees;
+
+This query returns the average salary of all employees.
+
+
+2. GROUP BY and HAVING
+1. GROUP BY is used to group rows that have the same values in a particular column.
+2. It is commonly used with aggregate functions like COUNT(), SUM(), and AVG().
+3. HAVING is used to filter grouped records.
+4. WHERE filters individual rows before grouping, whereas HAVING filters groups after grouping.
+5. GROUP BY is commonly used in reports to find department-wise salaries, employee counts, etc.
+Example:
+SELECT department_id, COUNT(*)
+FROM employees
+GROUP BY department_id
+HAVING COUNT(*) > 5;
+
+This query displays departments having more than 5 employees.
+
+3. Joins
+1. Joins are used to retrieve data from two or more tables based on a related column.
+2. INNER JOIN returns only matching records from both tables.
+3. LEFT JOIN returns all records from the left table and matching records from the right table.
+4. RIGHT JOIN returns all records from the right table and matching records from the left table.
+5. FULL OUTER JOIN returns all records from both tables, including unmatched records (MySQL does not directly support FULL OUTER JOIN).
+Example:
+SELECT employees.name, departments.department_name
+FROM employees
+INNER JOIN departments
+ON employees.department_id = departments.id;
+
+This query displays employee names with their department names.
+
+
+4. Subqueries
+1. A subquery is a query written inside another SQL query.
+2. A subquery is also called an inner query or nested query.
+3. It is written inside parentheses ().
+4. Subqueries can be used with SELECT, INSERT, UPDATE, and DELETE statements.
+5. Operators like IN, NOT IN, EXISTS, ANY, and ALL can be used with subqueries.
+Example:
+SELECT name, salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);
+
+This query displays employees whose salaries are greater than the average salary.
+
+5. Relationships Between Tables
+1. Relationships are used to connect two or more tables in a database.
+2. A One-to-One relationship means one record in a table is related to one record in another table.
+3. A One-to-Many relationship means one record in a table can be related to multiple records in another table.
+4. A Many-to-Many relationship means multiple records in one table can be related to multiple records in another table.
+5. Relationships are maintained using Primary Keys and Foreign Keys.
+Examples:
+- One-to-One: Employee and Employee Passport.
+- One-to-Many: Department and Employees.
+- Many-to-Many: Students and Courses.
+
+
+6. Index Basics
+1. An index is a database object used to improve the speed of data retrieval.
+2. It works similarly to an index in a book, helping us find information quickly.
+3. Indexes are commonly created on columns used frequently in WHERE, JOIN, and ORDER BY conditions.
+4. Indexes improve SELECT query performance but may slow down INSERT, UPDATE, and DELETE operations because the index also needs updating.
+5. A Primary Key automatically creates a unique index in MySQL.
+Example:
+CREATE INDEX idx_employee_name
+ON employees(name);
+
+This creates an index on the employee name column.
+
+7. Normalization Fundamentals
+1. Normalization is the process of organizing database tables to reduce data duplication.
+2. It helps maintain data consistency and improves database structure.
+3. 1NF (First Normal Form): Each column should contain atomic (single) values, without repeating groups.
+4. 2NF (Second Normal Form): The table must be in 1NF and have no partial dependency on a candidate key.
+5. 3NF (Third Normal Form): The table must be in 2NF and have no transitive dependency on a candidate key.
+Example:
+
+Instead of storing department details repeatedly in every employee record, create separate tables:
+- employees – stores employee information.
+- departments – stores department information.

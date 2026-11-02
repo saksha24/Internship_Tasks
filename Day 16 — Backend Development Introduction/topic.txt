@@ -1,0 +1,19 @@
+1. What is Backend Development?
+
+Backend development is the process of developing the server-side part of an application. It handles business logic, database operations, authentication, and data processing. It works behind the scenes and connects the frontend with the database. Java, Spring Boot, and MySQL are commonly used technologies for backend development.
+
+2. Client-Server Communication
+
+Client-server communication is the process through which a client (frontend/browser) sends requests to a server and receives responses. The client requests data, and the server processes the request and returns the result. For example, when a user logs in, Angular sends login details to the Spring Boot server, which verifies them and returns a response.
+
+3. HTTP Methods and HTTP Status Codes
+
+HTTP methods define the type of operation performed on a server. The main HTTP methods are GET (retrieve data), POST (create data), PUT (update complete data), PATCH (update partial data), and DELETE (remove data). HTTP status codes indicate the result of a request, such as 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), and 500 (Internal Server Error).
+
+4. REST API, Request and Response, and JSON
+
+REST API is a way for frontend and backend applications to communicate using HTTP methods. A request is the data sent from the client to the server, while a response is the data returned by the server. JSON (JavaScript Object Notation) is a lightweight data format used to exchange information between frontend and backend. For example, {"name":"Sakshi","age":23} is a JSON object.
+
+5. Introduction to Spring Boot, Maven Basics, and Project Structure
+
+Spring Boot is a Java framework used to develop standalone, production-ready applications and REST APIs quickly. It reduces configuration using auto-configuration and provides an embedded server like Tomcat. Maven is a build automation and dependency management tool that uses the pom.xml file to manage project dependencies. A typical Spring Boot project contains Controller (handles HTTP requests), Service (business logic), Repository (database operations), Entity (database table mapping), DTO (data transfer objects), and the main application class.
