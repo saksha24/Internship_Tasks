@@ -1,0 +1,74 @@
+1. Spring Boot Project Structure
+1. Spring Boot project structure organizes application code into different packages and files.
+2. controller package handles incoming HTTP requests.
+3. service package contains business logic.
+4. repository package handles database operations, while entity represents database tables.
+5. application.properties stores application configurations, and the main application class starts the project.
+
+
+2. Spring Initializr
+1. Spring Initializr is a web-based tool used to create Spring Boot projects easily.
+2. It is available at https://start.spring.io/.
+3. It allows developers to select Maven or Gradle, Java version, and Spring Boot version.
+4. It provides dependencies such as Spring Web, Spring Data JPA, MySQL Driver, and Lombok.
+5. It generates a ready-to-use Spring Boot project that can be imported into IntelliJ IDEA or Eclipse.
+
+
+3. Controllers
+1. A Controller is a component in Spring Boot that handles requests from clients.
+2. It connects the frontend with the backend application.
+3. It receives input from the client and sends it to the service layer.
+4. The @Controller annotation is used to create a Spring MVC controller.
+5. Controllers return views or responses depending on the application requirements.
+
+
+4. REST Controllers
+1. A REST Controller is used to create REST APIs in Spring Boot.
+2. The @RestController annotation combines @Controller and @ResponseBody.
+3. It returns data directly instead of returning HTML pages.
+4. It commonly sends and receives JSON data.
+5. It is used to develop communication between frontend applications and backend services.
+
+
+5. Request Mappings
+1. Request mapping connects a particular URL with a controller method.
+2. The @RequestMapping annotation is used to define URL paths.
+3. @GetMapping handles GET requests.
+4. @PostMapping, @PutMapping, and @DeleteMapping handle create, update, and delete operations.
+5. Request mappings help organize REST API endpoints.
+
+
+6. HTTP Methods
+1. HTTP methods define the type of operation performed on server resources.
+2. GET is used to retrieve data from the server.
+3. POST is used to create new resources.
+4. PUT and PATCH are used to update existing resources.
+5. DELETE is used to remove resources from the server.
+
+
+7. Dependency Injection
+1. Dependency Injection (DI) is a design pattern used to manage object dependencies.
+2. Spring Boot provides dependencies automatically through its IoC container.
+3. It reduces tight coupling between application classes.
+4. @Autowired can be used to inject dependencies, although constructor injection is generally recommended.
+5. It makes applications easier to maintain, test, and manage.
+
+
+8. Application Configuration
+1. Application configuration is used to define settings required to run a Spring Boot application.
+2. The application.properties file stores configuration values.
+3. It can define server port, database URL, username, and password.
+4. It also supports configuration for logging, security, and JPA.
+5. Spring Boot also supports application.yml for writing configuration in YAML format.
+
+Annotation	                Purpose
+@SpringBootApplication	  Starts Spring Boot application
+@Controller	              Creates MVC controller
+@RestController         	Creates REST API controller
+@RequestMapping	          Defines request URL
+@GetMapping               Handles GET requests
+@PostMapping            	Handles POST requests
+@Service	                Defines service layer
+@Repository             	Defines repository layer
+@Autowired              	Injects dependencies
+@Entity	                  Defines database entity
