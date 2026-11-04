@@ -1,0 +1,139 @@
+1. Spring Data JPA
+1. Definition: Spring Data JPA is a part of Spring that makes database operations easier without writing SQL queries manually.
+2. Repository: It provides interfaces like JpaRepository to perform database operations.
+3. CRUD Operations: It supports saving, updating, deleting and retrieving records.
+4. Custom Queries: We can write custom database queries using @Query.
+5. Less Code: It reduces boilerplate code and simplifies database interaction.
+Example:
+public interface EmployeeRepository
+        extends JpaRepository<Employee, Long> {
+}
+
+
+2. Hibernate Basics
+1. Definition: Hibernate is an ORM (Object Relational Mapping) framework used to connect Java objects with database tables.
+2. ORM: It maps Java classes to database tables and Java fields to table columns.
+3. Automatic SQL: Hibernate generates SQL queries automatically for database operations.
+4. HQL: Hibernate provides Hibernate Query Language (HQL) to query database entities.
+5. Transactions: It supports database transactions to maintain data consistency.
+Example:
+@Entity
+public class Employee {
+    @Id
+    private Long id;
+
+    private String name;
+}
+
+Here, Hibernate maps the Employee class to a database table.
+
+
+3. Entity Classes
+1. Definition: An entity class is a Java class that represents a database table.
+2. @Entity: This annotation tells JPA that the class is an entity.
+3. @Id: It defines the primary key of the table.
+4. @GeneratedValue: It automatically generates primary key values.
+5. @Column: It specifies the database column properties, such as name and length.
+Example:
+@Entity
+@Table(name = "employees")
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "employee_name")
+    private String name;
+
+    private String email;
+}
+
+
+4. Repository Interfaces
+1. Definition: A repository interface is used to communicate with the database.
+2. JpaRepository: It provides built-in CRUD methods.
+3. save(): Used to insert or update records.
+4. findById(): Used to retrieve a record using its primary key.
+5. deleteById(): Used to delete a record using its primary key.
+Example:
+@Repository
+public interface EmployeeRepository
+        extends JpaRepository<Employee, Long> {
+}
+
+
+Important methods:
+Method	          Purpose
+save()          	Insert or update
+findAll()       	Get all records
+findById()      	Get record by ID
+deleteById()    	Delete record
+existsById()    	Check record existence
+
+5. Database Configuration
+1. Database Connection: Spring Boot connects to databases like MySQL using configuration properties.
+2. URL: spring.datasource.url specifies the database location.
+3. Username: spring.datasource.username specifies the database username.
+4. Password: spring.datasource.password specifies the database password.
+5. Hibernate DDL: spring.jpa.hibernate.ddl-auto controls table creation and updates.
+
+Example – application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/hrms_db
+
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+
+6. CRUD Operations
+CRUD stands for Create, Read, Update and Delete.
+1. Create: Insert a new record into the database using save().
+2. Read: Retrieve records using findAll() or findById().
+3. Update: Modify an existing record and save it using save().
+4. Delete: Remove a record using deleteById().
+5. Exception Handling: Handle errors such as record not found or invalid input.
+Example:
+// Create
+Employee employee = new Employee();
+employee.setName("Rahul");
+employeeRepository.save(employee);
+
+// Read
+employeeRepository.findAll();
+
+// Update
+employee.setName("Amit");
+employeeRepository.save(employee);
+
+// Delete
+employeeRepository.deleteById(1L);
+
+
+7. Request and Response Handling
+1. @RestController: Used to create REST APIs that return data, usually in JSON format.
+2. @RequestBody: Converts incoming JSON request data into a Java object.
+3. @PathVariable: Extracts values from the URL.
+4. @RequestParam: Reads query parameters from the URL.
+5. ResponseEntity: Used to return response data along with HTTP status codes.
+Example:
+@RestController
+@RequestMapping("/api/employees")
+public class EmployeeController {
+
+    @PostMapping
+    public ResponseEntity<String> createEmployee(
+            @RequestBody Employee employee) {
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body("Employee created successfully");
+    }
+
+    @GetMapping("/{id}")
+    public String getEmployee(@PathVariable Long id) {
+        return "Employee ID: " + id;
+    }
+}
