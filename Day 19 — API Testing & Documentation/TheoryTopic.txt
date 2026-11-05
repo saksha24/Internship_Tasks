@@ -1,0 +1,107 @@
+1. Introduction to Postman
+1. Postman is an API testing tool used to test REST APIs.
+2. It allows developers to send HTTP requests to the backend.
+3. We can test APIs without creating a frontend application.
+4. Postman displays API responses, status codes, headers, and response time.
+5. It helps developers identify and debug API errors.
+
+
+2. Sending GET, POST, PUT, and DELETE Requests
+1. GET: Used to retrieve or fetch data from the server.
+2. POST: Used to create new records in the database.
+3. PUT: Used to update existing records on the server.
+4. DELETE: Used to remove existing records from the database.
+5. These HTTP methods help perform CRUD operations (Create, Read, Update, Delete).
+
+
+3. Request Bodies and JSON
+1. A request body contains data sent from the client to the server.
+2. JSON stands for JavaScript Object Notation.
+3. JSON stores data in key-value pairs.
+4. POST and PUT requests commonly use JSON request bodies.
+5. The Content-Type: application/json header tells the server that the request contains JSON data.
+Example JSON:
+{
+  "firstName": "Sakshi",
+  "lastName": "Shinde",
+  "email": "sakshi@gmail.com",
+  "role": "EMPLOYEE"
+}
+
+
+4. HTTP Status Codes
+1. 200 OK: Request completed successfully.
+2. 201 Created: New resource successfully created.
+3. 400 Bad Request: Client sent invalid or incorrect data.
+4. 401 Unauthorized: Authentication is required or credentials are invalid.
+5. 404 Not Found: Requested resource or API endpoint was not found.
+Additional important code: 500 Internal Server Error – An unexpected error occurred on the server.
+
+
+5. API Response Validation
+1. API response validation checks whether the API returns the expected result.
+2. Verify the HTTP status code.
+3. Check whether the response body contains the correct data.
+4. Validate response fields such as ID, name, email, and status.
+5. Verify response time and ensure the API works as expected.
+
+
+6. Error Handling Basics
+1. Error handling manages unexpected problems during API execution.
+2. Use appropriate HTTP status codes to identify errors.
+3. Validate user input before processing requests.
+4. Return meaningful error messages to help identify the problem.
+5. Handle exceptions properly to prevent application crashes.
+
+
+7. Introduction to Swagger/OpenAPI
+1. Swagger is a toolset used to document and test REST APIs.
+2. OpenAPI is a standard specification for describing REST APIs.
+3. Swagger UI provides an interactive interface to view API documentation.
+4. It displays API endpoints, HTTP methods, request bodies, and responses.
+5. Developers can test API endpoints directly through Swagger UI without manually writing requests in Postman.
+
+Test 1: GET – Fetch All Students
+- Method: GET
+- URL: http://localhost:8080/api/students
+- Click Send.
+- Expected status: 200 OK.
+- Expected result: Display all student records.
+
+Test 2: POST – Add New Student
+- Method: POST
+- URL: http://localhost:8080/api/students
+- Select Body → raw → JSON.
+- Enter the following JSON:
+{
+  "name": "Rahul",
+  "email": "rahul@gmail.com",
+  "course": "Java"
+}
+
+
+- Click Send.
+- Expected status: 201 Created.
+- Expected result: New student successfully added.
+
+Test 3: PUT – Update Student
+- Method: PUT
+- URL: http://localhost:8080/api/students/1
+- Enter updated JSON:
+{
+  "name": "Rahul Sharma",
+  "email": "rahulsharma@gmail.com",
+  "course": "Spring Boot"
+}
+
+
+- Click Send.
+- Expected status: 200 OK.
+- Expected result: Student details successfully updated.
+
+Test 4: DELETE – Delete Student
+- Method: DELETE
+- URL: http://localhost:8080/api/students/1
+- Click Send.
+- Expected status: 200 OK or 204 No Content.
+- Expected result: Student successfully deleted.
