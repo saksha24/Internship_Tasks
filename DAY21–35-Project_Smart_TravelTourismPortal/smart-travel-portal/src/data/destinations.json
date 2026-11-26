@@ -1,0 +1,129 @@
+
+[
+  {
+    "id": 1,
+    "slug": "goa",
+    "name": "Goa",
+    "country": "India",
+    "category": "Beach",
+    "rating": 4.8,
+    "duration": "4 Days / 3 Nights",
+    "price": 8999,
+    "bestTime": "November to February",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=900",
+    "description": "Explore beautiful beaches, Portuguese architecture, nightlife and delicious seafood in Goa.",
+    "attractions": ["Baga Beach", "Calangute Beach", "Fort Aguada", "Basilica of Bom Jesus"],
+    "activities": ["Water Sports", "Beach Activities", "Cruise Ride", "Local Shopping"],
+    "travelInfo": {
+      "transport": "Goa is accessible by flight, train and bus.",
+      "airport": "Manohar International Airport and Goa International Airport",
+      "localTransport": "Rental bikes, taxis, auto-rickshaws and local buses.",
+      "tips": "Book accommodation early during peak season and carry sunscreen."
+    }
+  },
+  {
+    "id": 2,
+    "slug": "manali",
+    "name": "Manali",
+    "country": "India",
+    "category": "Mountain",
+    "rating": 4.9,
+    "duration": "5 Days / 4 Nights",
+    "price": 12999,
+    "bestTime": "October to June",
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900",
+    "description": "Experience beautiful Himalayan mountains, snow-covered valleys and adventure activities.",
+    "attractions": ["Solang Valley", "Rohtang Pass", "Hadimba Temple", "Old Manali"],
+    "activities": ["Paragliding", "Skiing", "Trekking", "River Rafting"],
+    "travelInfo": {
+      "transport": "Manali can be reached by road from Delhi and Chandigarh. The nearest major railway station is Chandigarh.",
+      "airport": "Bhuntar Airport",
+      "localTransport": "Local taxis, buses and rental bikes.",
+      "tips": "Carry warm clothes, check weather conditions and verify road access before visiting high-altitude attractions."
+    }
+  },
+  {
+    "id": 3,
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "country": "India",
+    "category": "Heritage",
+    "rating": 4.7,
+    "duration": "3 Days / 2 Nights",
+    "price": 7499,
+    "bestTime": "October to March",
+    "image": "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=900",
+    "description": "Discover royal palaces, magnificent forts and traditional Rajasthani culture.",
+    "attractions": ["Hawa Mahal", "Amber Fort", "City Palace", "Jantar Mantar"],
+    "activities": ["Heritage Tours", "Shopping", "Cultural Shows", "Food Tours"],
+    "travelInfo": {
+      "transport": "Jaipur is well connected by flights, trains and buses.",
+      "airport": "Jaipur International Airport",
+      "localTransport": "Metro, auto-rickshaws, taxis and city buses.",
+      "tips": "Visit forts early in the morning and carry water while exploring historical sites."
+    }
+  },
+  {
+    "id": 4,
+    "slug": "kerala",
+    "name": "Kerala",
+    "country": "India",
+    "category": "Nature",
+    "rating": 4.9,
+    "duration": "6 Days / 5 Nights",
+    "price": 15999,
+    "bestTime": "September to March",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900",
+    "description": "Enjoy peaceful backwaters, green tea gardens and beautiful natural landscapes.",
+    "attractions": ["Munnar", "Alleppey", "Thekkady", "Wayanad"],
+    "activities": ["Houseboat Stay", "Nature Walks", "Tea Garden Tours", "Wildlife Safari"],
+    "travelInfo": {
+      "transport": "Kerala is accessible by flights, trains and buses.",
+      "airport": "Cochin International Airport, Trivandrum International Airport and Calicut International Airport",
+      "localTransport": "Taxis, buses, trains and boats in backwater regions.",
+      "tips": "Carry light cotton clothes and book houseboat experiences in advance."
+    }
+  },
+  {
+    "id": 5,
+    "slug": "paris",
+    "name": "Paris",
+    "country": "France",
+    "category": "International",
+    "rating": 4.9,
+    "duration": "6 Days / 5 Nights",
+    "price": 89999,
+    "bestTime": "April to June",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900",
+    "description": "Explore romantic streets, iconic monuments and world-famous museums.",
+    "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame", "Arc de Triomphe"],
+    "activities": ["River Cruise", "Museum Tours", "Shopping", "City Sightseeing"],
+    "travelInfo": {
+      "transport": "Paris is accessible through international flights and European train networks.",
+      "airport": "Charles de Gaulle Airport and Orly Airport",
+      "localTransport": "Metro, buses, trams, taxis and regional trains.",
+      "tips": "Keep your passport secure, check museum opening days and consider booking popular attractions in advance."
+    }
+  },
+  {
+    "id": 6,
+    "slug": "bali",
+    "name": "Bali",
+    "country": "Indonesia",
+    "category": "International",
+    "rating": 4.8,
+    "duration": "5 Days / 4 Nights",
+    "price": 55999,
+    "bestTime": "April to October",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900",
+    "description": "Discover tropical beaches, beautiful temples and scenic island landscapes.",
+    "attractions": ["Ubud", "Tanah Lot Temple", "Uluwatu Temple", "Nusa Penida"],
+    "activities": ["Snorkeling", "Island Tours", "Temple Visits", "Beach Activities"],
+    "travelInfo": {
+      "transport": "Bali is accessible through international flights.",
+      "airport": "Ngurah Rai International Airport",
+      "localTransport": "Rental scooters, taxis and private tour vehicles.",
+      "tips": "Respect local temple customs, carry appropriate clothing for temple visits and check ferry schedules for island trips."
+    }
+  }
+]

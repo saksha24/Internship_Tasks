@@ -1,0 +1,161 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.header {
+  background: #1e40af;
+  color: white;
+  padding: 25px 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin-bottom: 0;
+  color: #dbeafe;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.form-section,
+.table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #2563eb;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: white;
+  margin-right: 5px;
+}
+
+.submit-btn {
+  background: #2563eb;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: #64748b;
+}
+
+.edit-btn {
+  background: #0d9488;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.table-header span {
+  color: #475569;
+  font-size: 14px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th,
+td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+th {
+  background: #eff6ff;
+}
+
+.error-message {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 6px;
+}
+
+@media (max-width: 850px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .error-message {
+    margin: 15px 20px;
+  }
+}

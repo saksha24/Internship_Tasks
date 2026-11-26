@@ -1,0 +1,38 @@
+1. Reusable Components
+- Reusable components are React components that can be used multiple times in different parts of an application.
+- They help avoid writing the same code repeatedly.
+- They make code clean, organized and easy to maintain.
+- Example: DestinationCard, PackageCard, Header, Footer.
+- In our project, we created reusable cards to display different destinations and tour packages.
+
+
+2. Props
+- Props stands for Properties.
+- Props are used to pass data from a parent component to a child component.
+- Props are read-only; child components should not modify them.
+- They make components dynamic and reusable.
+- Example: Passing destination name, image, price and description to DestinationCard.
+
+
+3. Component Composition
+- Component composition means combining smaller components to create a larger user interface.
+- It helps divide an application into small, manageable parts.
+- Each component performs a specific task.
+- It improves code reusability and readability.
+- Example: DestinationList uses multiple DestinationCard components to display destinations.
+
+
+4. Rendering Lists Using map()
+- The map() method is a JavaScript array method.
+- It is used to iterate over an array and return a new element for each item.
+- In React, it helps display multiple records dynamically.
+- We use the key prop to uniquely identify each rendered element.
+- Example: Displaying all destinations from destinations.json using destinations.map().
+
+
+5. Advantages of These Concepts
+- Reduce code duplication.
+- Improve code readability and maintainability.
+- Make UI development faster.
+- Allow dynamic data rendering.
+- Make the application easier to update and extend.

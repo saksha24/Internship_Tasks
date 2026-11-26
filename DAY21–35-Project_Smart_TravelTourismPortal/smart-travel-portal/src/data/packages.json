@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": 1,
+    "slug": "goa-beach-escape",
+    "name": "Goa Beach Escape",
+    "destinationId": 1,
+    "destination": "Goa",
+    "duration": "4 Days / 3 Nights",
+    "price": 8999,
+    "category": "Family",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=900",
+    "description": "Enjoy beaches, sightseeing and exciting water sports.",
+    "inclusions": ["Hotel Accommodation", "Breakfast", "Airport Transfers", "Sightseeing"],
+    "itinerary": ["Day 1: Arrival in Goa", "Day 2: North Goa Tour", "Day 3: South Goa Tour", "Day 4: Departure"]
+  },
+  {
+    "id": 2,
+    "slug": "manali-adventure",
+    "name": "Manali Adventure Trip",
+    "destinationId": 2,
+    "destination": "Manali",
+    "duration": "5 Days / 4 Nights",
+    "price": 12999,
+    "category": "Adventure",
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900",
+    "description": "Enjoy mountain adventures and Himalayan sightseeing.",
+    "inclusions": ["Hotel Stay", "Breakfast", "Dinner", "Local Transfers"],
+    "itinerary": ["Day 1: Arrival", "Day 2: Solang Valley", "Day 3: Local Sightseeing", "Day 4: Kullu Valley", "Day 5: Departure"]
+  },
+  {
+    "id": 3,
+    "slug": "rajasthan-royal-tour",
+    "name": "Rajasthan Royal Tour",
+    "destinationId": 3,
+    "destination": "Jaipur",
+    "duration": "3 Days / 2 Nights",
+    "price": 7499,
+    "category": "Heritage",
+    "image": "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=900",
+    "description": "Discover historical forts and royal palaces.",
+    "inclusions": ["Hotel Stay", "Breakfast", "Guided Tour", "Transfers"],
+    "itinerary": ["Day 1: City Palace", "Day 2: Amber Fort", "Day 3: Shopping and Departure"]
+  },
+  {
+    "id": 4,
+    "slug": "kerala-nature-holiday",
+    "name": "Kerala Nature Holiday",
+    "destinationId": 4,
+    "destination": "Kerala",
+    "duration": "6 Days / 5 Nights",
+    "price": 15999,
+    "category": "Nature",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900",
+    "description": "Experience beautiful backwaters and green landscapes.",
+    "inclusions": ["Hotels", "Breakfast", "Houseboat", "Transfers"],
+    "itinerary": ["Day 1: Kochi", "Day 2: Munnar", "Day 3: Tea Gardens", "Day 4: Thekkady", "Day 5: Alleppey", "Day 6: Departure"]
+  },
+  {
+    "id": 5,
+    "slug": "romantic-paris-holiday",
+    "name": "Romantic Paris Holiday",
+    "destinationId": 5,
+    "destination": "Paris",
+    "duration": "6 Days / 5 Nights",
+    "price": 89999,
+    "category": "International",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900",
+    "description": "Discover the beauty and romance of Paris.",
+    "inclusions": ["Hotel", "Breakfast", "City Tour", "River Cruise"],
+    "itinerary": ["Day 1: Arrival", "Day 2: Eiffel Tower", "Day 3: Louvre Museum", "Day 4: Versailles", "Day 5: Shopping", "Day 6: Departure"]
+  },
+  {
+    "id": 6,
+    "slug": "bali-island-getaway",
+    "name": "Bali Island Getaway",
+    "destinationId": 6,
+    "destination": "Bali",
+    "duration": "5 Days / 4 Nights",
+    "price": 55999,
+    "category": "International",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900",
+    "description": "Enjoy tropical beaches, temples and island adventures.",
+    "inclusions": ["Resort Stay", "Breakfast", "Airport Transfers", "Sightseeing"],
+    "itinerary": ["Day 1: Arrival", "Day 2: Ubud", "Day 3: Nusa Penida", "Day 4: Uluwatu", "Day 5: Departure"]
+  }
+]

@@ -1,0 +1,42 @@
+Day 21 – React Project Setup & Basic Structure    
+React आणि Vite वापरून project create केला.
+Project चे नाव smart-travel-portal ठेवले.
+Header, Footer आणि Home page तयार केले.
+JSX वापरून UI structure तयार केले.
+CSS वापरून website ला basic styling दिली.
+
+Day 22 – Reusable Components & Props
+DestinationCard आणि DestinationList components तयार केले.
+PackageCard आणि PackageList components तयार केले.
+Destinations आणि Packages साठी local JSON files तयार केल्या.
+props वापरून parent component मधून child component ला data पाठवला.
+map() वापरून अनेक destination आणि package cards display केले.
+
+Day 23 – Search & Filter Functionality
+Destination search functionality तयार केली.
+Name आणि country नुसार destinations search करता येतात.
+Category filter तयार केला.
+India आणि International region filter तयार केला.
+Budget filter, Clear Filters आणि No Results message तयार केले.
+
+Day 24 – Travel Inquiry Form
+Contact/Travel Inquiry form तयार केला.
+Name, Email, Phone, Destination, Travel Date, Travelers, Package आणि Message fields तयार केले.
+React useState वापरून form data manage केला.
+Required fields आणि email, phone, date यांसाठी validation केले.
+Successful form submission नंतर inquiry localStorage मध्ये save केली.
+
+Day 25 – React Router & Page Navigation
+react-router-dom वापरून routing configure केले.
+Home, Destinations, Packages, Favorites, About आणि Contact pages तयार केले.
+BrowserRouter, Routes आणि Route वापरले.
+Link आणि NavLink वापरून navigation तयार केले.
+Invalid URL साठी NotFound page तयार केला.
+
+Day 26 – Destination Listing & Details
+प्रत्येक destination साठी detailed page तयार केला.
+useParams() वापरून URL मधील destination slug मिळवला.
+JSON file मधून संबंधित destination ची माहिती display केली.
+Description, Attractions, Activities, Best Time, Budget आणि Travel Information दाखवले.
+Invalid destination साठी Destination Not Found message तयार केला.
+

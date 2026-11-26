@@ -1,0 +1,21 @@
+1. Dynamic Route Parameters
+- Dynamic route parameters are used to create routes that change based on the data.
+- React Router provides useParams() to access dynamic values from the URL.
+- Example: /destinations/goa मध्ये goa हा dynamic parameter आहे.
+- It helps display individual destination details.
+- It avoids creating separate routes for every destination.
+
+2. Passing Data to Components
+- React components can share data using props.
+- Props are used to pass information from parent components to child components.
+- Props make components reusable and flexible.
+- Example: Passing destination name, price, image and rating to DestinationCard.
+- Child components can access this data using props.
+
+
+3. Conditional Rendering
+- Conditional rendering means displaying UI elements based on a condition.
+- React supports conditional rendering using if, ternary operators and logical &&.
+- It helps display different content for different situations.
+- Example: Showing destination details if the destination exists.
+- If a destination is not found, we can display a Destination Not Found message.

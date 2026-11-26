@@ -1,0 +1,46 @@
+1. useState Hook
+- useState is a React Hook used to manage state in functional components.
+- State stores data that can change over time.
+- When state changes, React automatically re-renders the component.
+- It returns two values: current state and a function to update the state.
+- Example: Managing search text, selected category and favorite destinations.
+const [search, setSearch] = useState("");
+
+
+2. Event Handling
+- Event handling is used to respond to user actions in a React application.
+- Examples include button clicks, typing in input fields and form submissions.
+- React uses event handlers such as onClick, onChange and onSubmit.
+- Event handlers make applications interactive.
+- Example: Updating search text when the user types in the search box.
+<input onChange={(e) => setSearch(e.target.value)} />
+
+
+3. Search Functionality
+- Search functionality allows users to find specific information by entering keywords.
+- It is commonly implemented using input fields and state.
+- React can search records based on names, locations or categories.
+- The filter() method is commonly used to find matching records.
+- Example: Searching destinations by destination name or country in our Travel Portal.
+4. Filtering Arrays
+- Filtering arrays means selecting only those elements that satisfy a particular condition.
+- JavaScript provides the filter() method to perform this operation.
+- It returns a new array without modifying the original array.
+- Multiple conditions can be applied, such as category, location and budget.
+- Example: Displaying only Beach destinations or destinations under a selected budget.
+const filteredDestinations = destinations.filter(
+  (item) => item.category === "Beach"
+);
+
+
+5. Conditional Rendering
+- Conditional rendering means displaying UI elements based on specific conditions.
+- React supports conditional rendering using if, ternary operators and logical AND (&&).
+- It helps display different content depending on application state.
+- It is useful for showing loading messages, error messages and empty search results.
+- Example: Displaying "No destinations found" when the search returns no matching records.
+{filteredDestinations.length > 0 ? (
+  <DestinationList destinations={filteredDestinations} />
+) : (
+  <p>No destinations found.</p>
+)}

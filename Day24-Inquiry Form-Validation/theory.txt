@@ -1,0 +1,35 @@
+1. Controlled React Forms
+- Controlled forms are forms in which React manages the input field values using state.
+- The useState() Hook is used to store input values.
+- The value attribute connects an input field to React state.
+- The onChange event updates the state whenever the user enters data.
+- Example: Name, email, password and contact number fields.
+
+2. Form Validation
+- Form validation checks whether the entered data is correct and valid.
+- It ensures that users enter required information before submitting a form.
+- Common validations include required fields, valid email format and minimum password length.
+- Validation helps prevent incorrect or incomplete data.
+- Example: Checking whether the email contains a valid email format.
+
+3. Error Messages
+- Error messages inform users when they enter invalid or incomplete information.
+- They help users understand what needs to be corrected.
+- Error messages can be displayed using conditional rendering.
+- They should be clear and displayed near the relevant input field.
+- Example: "Email is required" or "Please enter a valid email address."
+
+4. Submission Handling
+- Submission handling manages what happens when a user submits a form.
+- The onSubmit event is used to handle form submission.
+- The preventDefault() method prevents the browser's default page reload.
+- Before submission, React can validate all input fields.
+- If validation succeeds, form data can be sent to the backend API.
+
+
+5. Advantages of React Forms
+- Makes form handling easier and more organized.
+- Provides real-time validation and error messages.
+- Prevents invalid or incomplete data submission.
+- Improves user experience.
+- Makes frontend and backend data integration easier.

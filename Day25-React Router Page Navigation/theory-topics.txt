@@ -1,0 +1,34 @@
+1. React Router
+- React Router is a library used for navigation in React applications.
+- It helps create multiple pages in a single-page application (SPA).
+- It allows users to navigate without reloading the entire page.
+- We install it using npm install react-router-dom.
+- Example: Home, Destinations, Packages and Contact pages.
+
+2. Routes and Navigation
+- Routes define which component should be displayed for a particular URL.
+- BrowserRouter is used to enable routing in the application.
+- Routes and Route are used to configure application routes.
+- Link and NavLink are used for navigation between pages.
+- Example: /destinations displays the Destinations page.
+
+3. Dynamic Route Parameters
+- Dynamic routes allow URLs to contain variable values.
+- We use :parameterName to define a dynamic route.
+- React Router provides the useParams() hook to access route parameters.
+- Example: /destinations/:slug.
+- It helps display details of a specific destination dynamically.
+
+4. Not-Found Page
+- A Not-Found page is displayed when a user visits an invalid URL.
+- It helps handle routes that are not defined in the application.
+- We use path="*" in React Router to match unknown routes.
+- It improves user experience by displaying a proper error message.
+- We can provide a link to navigate back to the Home page.
+
+5. Benefits of React Router
+- Makes navigation between pages easy.
+- Supports dynamic routing.
+- Prevents full-page reloads.
+- Helps organize multi-page React applications.
+- Makes applications easier to maintain and manage.
